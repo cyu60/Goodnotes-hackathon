@@ -16,6 +16,13 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    /* color palette */
+    --red: #d65746;
+    --seafoam: #008089;
+    --canary: #ffe55f;
+    --apple: #00b577;
+    --gnTeal: #45bfdb;
   }
 }
 
