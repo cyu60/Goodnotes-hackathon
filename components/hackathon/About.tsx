@@ -9,7 +9,7 @@ export function About() {
           <div className="space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
               Innovation Meets{" "}
-              <span className="text-seafoam">Collaboration</span>
+              <span className="text-[var(--seafoam)]">Collaboration</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our hackathon brings together passionate developers, designers,
@@ -22,8 +22,8 @@ export function About() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-8 h-8 text-red" />
+                <div className="w-16 h-16 bg-[var(--red)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Lightbulb className="w-8 h-8 text-[var(--red)]" />
                 </div>
                 <CardTitle className="text-xl font-bold text-gray-900">
                   Innovation
@@ -39,8 +39,8 @@ export function About() {
 
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-apple/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Code2 className="w-8 h-8 text-apple" />
+                <div className="w-16 h-16 bg-[var(--apple)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Code2 className="w-8 h-8 text-[var(--apple)]" />
                 </div>
                 <CardTitle className="text-xl font-bold text-gray-900">
                   Coding Excellence
@@ -56,8 +56,8 @@ export function About() {
 
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gnTeal/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-gnTeal" />
+                <div className="w-16 h-16 bg-[var(--gnTeal)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-[var(--gnTeal)]" />
                 </div>
                 <CardTitle className="text-xl font-bold text-gray-900">
                   Teamwork

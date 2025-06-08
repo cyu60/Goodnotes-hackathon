@@ -3,155 +3,153 @@ import { Github, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">
-              Goodnotes <span className="text-canary">Hackathon</span>
+          <div>
+            <h3 className="text-xl font-bold text-white mb-4">
+              Goodnotes Hackathon
             </h3>
             <p className="text-gray-400">
-              Building the future through innovation, collaboration, and code.
+              Building the future of digital note-taking and productivity.
             </p>
-            <div className="flex space-x-4">
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-gnTeal transition-colors"
-              >
-                <Github className="w-6 h-6" />
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-gnTeal transition-colors"
-              >
-                <Twitter className="w-6 h-6" />
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-gnTeal transition-colors"
-              >
-                <Linkedin className="w-6 h-6" />
-              </Link>
-            </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Quick Links</h4>
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
               <li>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
                 >
-                  Register
-                </Link>
+                  About
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
                 >
                   Schedule
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
                 >
                   Prizes
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
                 >
                   Sponsors
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  FAQ
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Resources */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Resources</h4>
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
                 >
-                  Code of Conduct
-                </Link>
+                  Documentation
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
                 >
-                  Judging Criteria
-                </Link>
+                  API Reference
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
                 >
-                  API Documentation
-                </Link>
+                  Community
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
                 >
-                  Mentorship
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Past Events
-                </Link>
+                  FAQ
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Contact Us</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-gnTeal" />
-                <span className="text-gray-400">hello@hackathon.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-gnTeal" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-gnTeal" />
-                <span className="text-gray-400">San Francisco, CA</span>
-              </div>
-            </div>
+          {/* Contact Us */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Contact Us
+            </h4>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-[var(--gnTeal)]" />
+                <a
+                  href="mailto:hackathon@goodnotes.com"
+                  className="hover:text-[var(--gnTeal)] transition-colors"
+                >
+                  hackathon@goodnotes.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[var(--gnTeal)]" />
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[var(--gnTeal)]" />
+                <span>San Francisco, CA</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
+        {/* Social Links */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="flex justify-center gap-6">
+            <a
+              href="#"
+              className="hover:text-[var(--gnTeal)] transition-colors"
+            >
+              <Github className="w-6 h-6" />
+            </a>
+            <a
+              href="#"
+              className="hover:text-[var(--gnTeal)] transition-colors"
+            >
+              <Twitter className="w-6 h-6" />
+            </a>
+            <a
+              href="#"
+              className="hover:text-[var(--gnTeal)] transition-colors"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-8 text-center text-gray-400">
+          <p>
             &copy; {new Date().getFullYear()} Goodnotes Hackathon. All rights
             reserved.
           </p>
