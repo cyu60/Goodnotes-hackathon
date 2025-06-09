@@ -1,14 +1,20 @@
-import Link from "next/link";
+"use client";
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import { Home, Mail } from "lucide-react";
+
+const navItems = [
+    {
+        name: "About",
+        link: "/",
+        icon: <Home className="h-4 w-4" />,
+    },
+    {
+        name: "Contact",
+        link: "/",
+        icon: <Mail className="h-4 w-4" />,
+    },
+];
 
 export default function Navbar() {
-    return(
-        <div className="flex justify-between items-center p-4 bg-[var(--gnTeal)]">
-            <h1 className="text-white font-bold"> Goodnotes Hackathon </h1>
-            <div className="flex items-center gap-4">
-                <Link href="/">About</Link>
-                <Link href="/register">Register</Link>
-                <Link href="/">Contact</Link>
-            </div>
-        </div>
-    );
+    return <FloatingNav navItems={navItems} />;
 }
