@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Goodnotes Hackathon",
-  description: "Goodnotes 1st Hackathon",
+  description: "Goodnotes Hong Kong 1st Hackathon",
 };
 
 export default function RootLayout({
