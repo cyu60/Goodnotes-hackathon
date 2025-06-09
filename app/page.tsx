@@ -1,13 +1,15 @@
-import { Hero } from "@/components/hackathon/Hero";
-import { About } from "@/components/hackathon/About";
-import { Timeline } from "@/components/hackathon/Timeline";
-import { Prizes } from "@/components/hackathon/Prizes";
-import { Sponsors } from "@/components/hackathon/Sponsors";
-import { Footer } from "@/components/hackathon/Footer";
+import Navbar from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Timeline } from "@/components/Timeline";
+import { Prizes } from "@/components/Prizes";
+import { Sponsors } from "@/components/Sponsors";
+import { Footer } from "@/components/Footer";
 
 export default function HackathonLanding() {
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
       <Hero />
       <About />
       <Timeline />

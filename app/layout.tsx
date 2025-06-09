@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Goodnotes Hackathon",
+  title: "Goodnotes Hong Kong Hackathon",
   description: "Goodnotes Hong Kong 1st Hackathon",
 };
 
