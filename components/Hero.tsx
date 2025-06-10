@@ -6,8 +6,13 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/10"></div>
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            Goodnotes x MentorMates <span className="text-[var(--canary)]">Hackathon</span>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight flex items-center justify-center gap-4">
+            <img src={"../goodnotes.png"} alt="Goodnotes" className="w-20 h-20"/>
+            <span>Goodnotes</span>
+            <span className="text-[var(--canary)]"> x </span>
+            <img src={"../mentormates.png"} alt="Mentormates" className="w-20 h-20"/>
+            <span>MentorMates</span>
+            <span className="text-[var(--canary)]">Hackathon</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed">
             Join innovators, creators, and problem-solvers in building the
@@ -17,7 +22,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-[var(--red)] hover:bg-[var(--red)]/90 text-white px-8 py-3 text-lg font-semibold"
+              className="bg-[var(--red)] hover:bg-[var(--canary)]/90 hover:text-[var(--red)] text-white px-8 py-3 text-lg font-semibold"
             >
               Register Now
             </Button>

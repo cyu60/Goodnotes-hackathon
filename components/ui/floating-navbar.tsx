@@ -67,8 +67,7 @@ export const FloatingNav = ({
               "relative text-white items-center flex space-x-1 hover:text-neutral-200"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className="hidden sm:block text-lg">{navItem.name}</span>
           </a>
         ))}
         <a href="/register" className="border text-sm font-medium relative border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-[var(--gnTeal)]">
