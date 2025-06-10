@@ -25,6 +25,7 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-[var(--red)] hover:bg-[var(--canary)]/90 hover:text-[var(--red)] text-white px-8 py-3 text-lg font-semibold"
+              onClick={() => window.location.href = '/register'}
             >
               Register Now
             </Button>
