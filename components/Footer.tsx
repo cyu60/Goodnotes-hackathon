@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -74,14 +74,6 @@ export function Footer() {
                   href="#"
                   className="hover:text-[var(--gnTeal)] transition-colors"
                 >
-                  API Reference
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
                   Community
                 </a>
               </li>
@@ -113,11 +105,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[var(--gnTeal)]" />
-                <span>+1 (555) 123-4567</span>
+                <span>+582 222 222</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[var(--gnTeal)]" />
-                <span>San Francisco, CA</span>
+                <span>Hong Kong</span>
               </li>
             </ul>
           </div>
@@ -130,19 +122,19 @@ export function Footer() {
               href="#"
               className="hover:text-[var(--gnTeal)] transition-colors"
             >
-              <Github className="w-6 h-6" />
-            </a>
-            <a
-              href="#"
-              className="hover:text-[var(--gnTeal)] transition-colors"
-            >
-              <Twitter className="w-6 h-6" />
-            </a>
-            <a
-              href="#"
-              className="hover:text-[var(--gnTeal)] transition-colors"
-            >
               <Linkedin className="w-6 h-6" />
+            </a>
+            <a
+              href="#"
+              className="hover:text-[var(--gnTeal)] transition-colors"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a
+              href="mailto:hackathon@goodnotes.com"
+              className="hover:text-[var(--gnTeal)] transition-colors"
+            >
+              <Mail className="w-6 h-6" />
             </a>
           </div>
         </div>
