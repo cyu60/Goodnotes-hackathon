@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">
-              Goodnotes Hackathon
+              Goodnotes x MentorMates Hackathon
             </h3>
             <p className="text-gray-400">
               Building the future of digital note-taking and productivity.

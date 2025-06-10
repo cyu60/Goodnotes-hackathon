@@ -7,7 +7,7 @@ export function Hero() {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            Goodnotes <span className="text-[var(--canary)]">Hackathon</span>
+            Goodnotes x MentorMates <span className="text-[var(--canary)]">Hackathon</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed">
             Join innovators, creators, and problem-solvers in building the
