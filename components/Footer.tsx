@@ -3,15 +3,15 @@ import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-[var(--seafoam)] text-gray-300">
+      <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">
               Goodnotes x MentorMates Hackathon
             </h3>
-            <p className="text-gray-400">
+            <p className="text-gray-200">
               Building the future of digital note-taking and productivity.
             </p>
           </div>
@@ -116,7 +116,7 @@ export function Footer() {
         </div>
 
         {/* Social Links */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
+        <div className="pt-10">
           <div className="flex justify-center gap-6">
             <a
               href="#"
@@ -140,7 +140,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 text-center text-gray-400">
+        <div className="mt-4 text-center text-gray-200">
           <p>
             &copy; {new Date().getFullYear()} Goodnotes Hackathon. All rights
             reserved.

@@ -14,7 +14,7 @@ export default function HackathonLanding() {
       <About />
       <Timeline />
       <Prizes />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Footer />
     </div>
   );
