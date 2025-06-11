@@ -12,6 +12,7 @@ export default function ProfileSection() {
           type="text"
           required
           placeholder="Enter your full name"
+          className="bg-white"
         />
       </div>
 
@@ -23,6 +24,7 @@ export default function ProfileSection() {
           type="email"
           required
           placeholder="Enter your email address"
+          className="bg-white"
         />
       </div>
 
@@ -34,6 +36,7 @@ export default function ProfileSection() {
           type="tel"
           required
           placeholder="Enter your phone number"
+          className="bg-white"
         />
       </div>
 
@@ -45,6 +48,7 @@ export default function ProfileSection() {
           type="text"
           required
           placeholder="Enter your organization name"
+          className="bg-white"
         />
       </div>
 
@@ -56,6 +60,7 @@ export default function ProfileSection() {
           type="text"
           required
           placeholder="Enter your role"
+          className="bg-white"
         />
       </div>
     </div>
