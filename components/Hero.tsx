@@ -39,9 +39,9 @@ export function Hero() {
         </div>
       </div>
       {/* Decorative elements */}
-      {/* <div className="absolute top-20 left-10 w-20 h-20 bg-[var(--canary)]/20 rounded-full blur-xl"></div> */}
-      {/* <div className="absolute bottom-20 right-10 w-32 h-32 bg-[var(--red)]/20 rounded-full blur-xl"></div> */}
-      {/* <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-[var(--apple)]/20 rounded-full blur-lg"></div> */}
+      {/* <div className="absolute top-20 left-10 w-20 h-20 bg-[var(--canary)]/20 rounded-full blur-xl"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-[var(--red)]/20 rounded-full blur-xl"></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-[var(--apple)]/20 rounded-full blur-lg"></div> */}
     </section>
   );
 }

@@ -3,15 +3,15 @@ import { Lightbulb, Code2, Users } from "lucide-react";
 
 export function About() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-bl from-[var(--canary)] via-[var(--gnTeal)] to-[var(--white)]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
               Innovation Meets{" "}
-              <span className="text-[var(--seafoam)]">Collaboration</span>
+              <span className="text-[var(--canary)]">Collaboration</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Our hackathon brings together passionate developers, designers,
               and entrepreneurs to tackle real-world challenges. We believe in
               the power of diverse minds working together to create solutions
@@ -20,7 +20,7 @@ export function About() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="border-[var(--white)] bg-[var(--white)]">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-[var(--red)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="w-8 h-8 text-[var(--red)]" />
@@ -37,7 +37,7 @@ export function About() {
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="border-[var(--white)] bg-[var(--white)]">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-[var(--apple)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Code2 className="w-8 h-8 text-[var(--apple)]" />
@@ -54,7 +54,7 @@ export function About() {
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="border-[var(--white)] bg-[var(--white)]">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-[var(--gnTeal)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-[var(--gnTeal)]" />
