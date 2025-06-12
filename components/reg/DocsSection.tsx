@@ -17,14 +17,14 @@ export default function DocsSection() {
           <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-500 font-bold">
             2
           </div>
-          <span>Business Information</span>
+          <span>Short Questions</span>
         </div>
         <div className="flex items-center gap-4">
           <div className="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--seafoam)] text-white font-bold">
             3
           </div>
           <span className="font-semibold text-[var(--seafoam)]">
-            Additional Users
+            Additional Infromation
           </span>
         </div>
       </div>

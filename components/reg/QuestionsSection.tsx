@@ -18,20 +18,20 @@ export default function QuestionsSection() {
             2
           </div>
           <span className="font-semibold text-[var(--seafoam)]">
-            Business Information
+            Short Questions
           </span>
         </div>
         <div className="flex items-center gap-4 opacity-60">
           <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-500 font-bold">
             3
           </div>
-          <span>Additional Users</span>
+          <span>Additional Infromation</span>
         </div>
       </div>
       {/* Step Title */}
       <div className="mb-6 text-center">
         <h2 className="text-xl font-bold text-[var(--seafoam)] mb-1">Step 2</h2>
-        <h1 className="text-2xl font-bold mb-2">Business Information</h1>
+        <h1 className="text-2xl font-bold mb-2">Short Questions</h1>
         <p className="text-gray-500 text-sm max-w-lg mx-auto">
           Tell us more about your experience and motivation for joining the
           hackathon.
