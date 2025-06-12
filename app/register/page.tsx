@@ -2,12 +2,6 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import ProfileSection from "@/components/reg/ProfileSection";
 import QuestionsSection from "@/components/reg/QuestionsSection";
@@ -23,18 +17,25 @@ export default function RegisterPage() {
 
     const formData = new FormData(e.currentTarget);
     const data = {
-      "entry.1234567890": formData.get("fullName"),
-      "entry.1234567891": formData.get("email"),
-      "entry.1234567892": formData.get("phone"),
-      "entry.1234567893": formData.get("organization"),
-      "entry.1234567894": formData.get("role"),
-      "entry.1234567895": formData.get("experience"),
-      // Add additional form fields for questions and docs sections
+      "entry.1611259998": formData.get("firstName"),
+      "entry.438556156": formData.get("lastName"),
+      "entry.242018488": formData.get("email"),
+      "entry.1516008500": formData.get("school"), 
+      "entry.1444091658": formData.get("degree"), 
+      "entry.1512254965": formData.get("year"),
+      "entry.730672657": formData.get("expectedGradYear"),
+      "entry.1713755840": formData.get("q_experience"),
+      "entry.1326196853": formData.get("q_background"),
+      "entry.451350810": formData.get("q_goals"),
+      "entry.677189088": formData.get("how_stats"),
+      // "entry.1234567899": formData.get("projects"),
+      "entry.1319080282": formData.get("resume"),
+      // "entry.1234567891": formData.get("socials"),
     };
 
     try {
-      const response = await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSfxxxxxxxx/formResponse",
+      await fetch(
+        "https://forms.gle/J3xVWqmUDSVo81276",
         {
           method: "POST",
           mode: "no-cors",
@@ -61,47 +62,41 @@ export default function RegisterPage() {
     setSubmitting(false);
   };
 
-  const nextStep = () => {
-    setCurrentStep((prev) => Math.min(prev + 1, 3));
-  };
-
-  const prevStep = () => {
-    setCurrentStep((prev) => Math.max(prev - 1, 1));
-  };
-
+  const nextStep = () => setCurrentStep((prev) => Math.min(prev + 1, 3));
+  const prevStep = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
   const progress = (currentStep / 3) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[var(--seafoam)] via-[var(--gnTeal)] to-[var(--apple)] py-12 px-4">
-      <Card className="max-w-2xl mx-auto">
-        <CardHeader>
-          <CardTitle className="text-3xl text-center">
+    <div className="min-h-screen bg-gradient-to-br from-[var(--seafoam)] via-[var(--gnTeal)] to-[var(--apple)] p-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold text-white text-center mb-2">
             Register for the Hackathon
-          </CardTitle>
-          <CardDescription className="text-center">
+          </h1>
+          <p className="text-white/80 text-center text-lg">
             Join us for an exciting weekend of innovation and creativity
-          </CardDescription>
-          <div className="mt-4 space-y-2">
-            <Progress value={progress} className="h-2" />
-            <p className="text-sm text-center text-gray-500">
+          </p>
+          <div className="mt-6 max-w-2xl mx-auto">
+            <Progress value={progress} className="h-3" />
+            <p className="text-sm text-center text-white/80 mt-2">
               Step {currentStep} of 3
             </p>
           </div>
-        </CardHeader>
+        </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6 px-6">
-          <div className="bg-white rounded-lg p-6 shadow-sm">
+        <form onSubmit={handleSubmit} className="space-y-8">
+          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 shadow-2xl">
             {currentStep === 1 && <ProfileSection />}
             {currentStep === 2 && <QuestionsSection />}
             {currentStep === 3 && <DocsSection />}
           </div>
 
-          <div className="flex justify-between gap-4">
+          <div className="flex justify-between gap-6 max-w-2xl mx-auto">
             {currentStep > 1 && (
               <Button
                 type="button"
                 onClick={prevStep}
-                className="bg-gray-500 hover:bg-gray-600 text-white"
+                className="bg-white/20 hover:bg-white/30 text-white px-8 py-2 text-lg"
               >
                 Previous
               </Button>
@@ -111,7 +106,7 @@ export default function RegisterPage() {
               <Button
                 type="button"
                 onClick={nextStep}
-                className="bg-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/90 text-white ml-auto"
+                className="bg-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/90 text-white px-8 py-2 text-lg ml-auto"
               >
                 Next
               </Button>
@@ -119,14 +114,14 @@ export default function RegisterPage() {
               <Button
                 type="submit"
                 disabled={submitting}
-                className="bg-[var(--red)] hover:bg-[var(--red)]/90 text-white ml-auto"
+                className="bg-[var(--red)] hover:bg-[var(--red)]/90 text-white px-8 py-2 text-lg ml-auto"
               >
                 {submitting ? "Submitting..." : "Submit Registration"}
               </Button>
             )}
           </div>
         </form>
-      </Card>
+      </div>
     </div>
   );
 }
