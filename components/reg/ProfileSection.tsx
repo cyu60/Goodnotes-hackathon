@@ -1,122 +1,124 @@
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+import { ChangeEvent } from "react";
 
-export default function ProfileSection() {
+type Props = {
+  formData: {
+    agreeToTerms: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    school: string;
+    degree: string;
+    discipline: string;
+    year: string;
+    expectedGradYear: string;
+  };
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onCheckboxChange: (e: ChangeEvent<HTMLInputElement>) => void;
+};
+
+export default function ProfileSection({ formData, onChange, onCheckboxChange }: Props) {
   return (
-    <div className="max-w-2xl mx-auto bg-[var(--white)] rounded-2xl shadow-xl p-8">
-      {/* Stepper */}
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center gap-4">
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--seafoam)] text-white font-bold">
-            1
-          </div>
-          <span className="font-semibold text-[var(--seafoam)]">
-            Your Profile
-          </span>
-        </div>
-        <div className="flex items-center gap-4 opacity-60">
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-500 font-bold">
-            2
-          </div>
-          <span>Short Questions</span>
-        </div>
-        <div className="flex items-center gap-4 opacity-60">
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-500 font-bold">
-            3
-          </div>
-          <span>Additional Infromation</span>
-        </div>
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold text-white">Profile</h2>
+
+      <div className="flex items-center gap-2">
+        <input
+          type="checkbox"
+          name="agreeToTerms"
+          checked={formData.agreeToTerms === "Yes"}
+          onChange={onCheckboxChange}
+          className="h-4 w-4 rounded"
+          required
+        />
+        <label className="block text-white">I agree to the terms and conditions.</label>
       </div>
-      {/* Step Title */}
-      <div className="mb-6 text-center">
-        <h2 className="text-xl font-bold text-[var(--seafoam)] mb-1">
-          Step 1
-        </h2>
-        <h1 className="text-2xl font-bold mb-2">Your Profile</h1>
-        <p className="text-gray-500 text-sm max-w-lg mx-auto">
-          Enter your personal and academic information to get started.
-        </p>
+
+      <div>
+        <label className="block text-white">First Name</label>
+        <input
+          type="text"
+          name="firstName"
+          value={formData.firstName}
+          onChange={onChange}
+          className="w-full mt-1 p-2 rounded"
+        />
       </div>
-      {/* Form Fields */}
-      <div className="space-y-4 mb-6">
-        <div className="space-y-2">
-          <Label htmlFor="firstName">First Name</Label>
-          <Input
-            id="firstName"
-            name="firstName"
-            type="text"
-            required
-            placeholder="Enter your first name"
-            className="bg-white"
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="lastName">Last Name</Label>
-          <Input
-            id="lastName"
-            name="lastName"
-            type="text"
-            required
-            placeholder="Enter your last name"
-            className="bg-white"
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
-          <Input
-            id="email"
-            name="email"
-            type="email"
-            required
-            placeholder="Enter your email address"
-            className="bg-white"
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="school">School / University</Label>
-          <Input
-            id="school"
-            name="school"
-            type="text"
-            required
-            placeholder="Enter your school or university"
-            className="bg-white"
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="degree">Degree</Label>
-          <Input
-            id="degree"
-            name="degree"
-            type="text"
-            required
-            placeholder="e.g. BSc Computer Science"
-            className="bg-white"
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="year">Current Year</Label>
-          <Input
-            id="year"
-            name="year"
-            type="text"
-            required
-            placeholder="e.g. 2nd Year"
-            className="bg-white"
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="expectedGradYear">Expected Graduation Year</Label>
-          <Input
-            id="expectedGradYear"
-            name="expectedGradYear"
-            type="text"
-            required
-            placeholder="e.g. 2025"
-            className="bg-white"
-          />
-        </div>
+
+      <div>
+        <label className="block text-white">Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          value={formData.lastName}
+          onChange={onChange}
+          className="w-full mt-1 p-2 rounded"
+        />
+      </div>
+
+      <div>
+        <label className="block text-white">Email</label>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={onChange}
+          className="w-full mt-1 p-2 rounded"
+        />
+      </div>
+
+      <div>
+        <label className="block text-white">School</label>
+        <input
+          type="text"
+          name="school"
+          value={formData.school}
+          onChange={onChange}
+          className="w-full mt-1 p-2 rounded"
+        />
+      </div>
+
+      <div>
+        <label className="block text-white">Degree</label>
+        <input
+          type="text"
+          name="degree"
+          value={formData.degree}
+          onChange={onChange}
+          className="w-full mt-1 p-2 rounded"
+        />
+      </div>
+
+      <div>
+        <label className="block text-white">Discipline</label>
+        <input
+          type="text"
+          name="discipline"
+          value={formData.discipline}
+          onChange={onChange}
+          className="w-full mt-1 p-2 rounded"
+        />
+      </div>
+
+      <div>
+        <label className="block text-white">Year</label>
+        <input
+          type="text"
+          name="year"
+          value={formData.year}
+          onChange={onChange}
+          className="w-full mt-1 p-2 rounded"
+        />
+      </div>
+
+      <div>
+        <label className="block text-white">Expected Graduation Year</label>
+        <input
+          type="text"
+          name="expectedGradYear"
+          value={formData.expectedGradYear}
+          onChange={onChange}
+          className="w-full mt-1 p-2 rounded"
+        />
       </div>
     </div>
   );
