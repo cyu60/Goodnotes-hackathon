@@ -20,7 +20,7 @@ export function About() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-[var(--white)] bg-[var(--white)]">
+            <Card className="border-[var(--seafoam)] rounded-3xl bg-[var(--white)]">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-[var(--red)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="w-8 h-8 text-[var(--red)]" />
@@ -37,7 +37,7 @@ export function About() {
               </CardContent>
             </Card>
 
-            <Card className="border-[var(--white)] bg-[var(--white)]">
+            <Card className="border-[var(--seafoam)] rounded-3xl bg-[var(--white)]">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-[var(--apple)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Code2 className="w-8 h-8 text-[var(--apple)]" />
@@ -54,7 +54,7 @@ export function About() {
               </CardContent>
             </Card>
 
-            <Card className="border-[var(--white)] bg-[var(--white)]">
+            <Card className="border-[var(--seafoam)] rounded-3xl bg-[var(--white)]">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-[var(--gnTeal)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-[var(--gnTeal)]" />
