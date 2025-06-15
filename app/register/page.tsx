@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -9,10 +9,24 @@ import QuestionsSection from "@/components/reg/QuestionsSection";
 import DocsSection from "@/components/reg/DocsSection";
 
 export default function RegisterPage() {
+  // State for form navigation and status
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if mobile on mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const [formData, setFormData] = useState({
     agreeToTerms: "",
@@ -157,13 +171,15 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[var(--seafoam)] via-[var(--gnTeal)] to-[var(--canary)] p-4 sm:p-8">
       <div className="max-w-2xl mx-auto">
-        <div className="flex justify-between items-center mb-6 sm:mb-8">
-          <Link href="/" className="absolute top-4 sm:top-8 left-4 sm:left-8">
-            <Button className="bg-white/20 hover:bg-white/30 text-white px-4 sm:px-6 py-2">
-              ← Back
-            </Button>
-          </Link>
-          <div className="text-center flex-1">
+        <div className="mb-6 sm:mb-8">
+          <div className="mb-4">
+            <Link href="/">
+              <Button className="bg-white/20 hover:bg-white/30 text-white px-4 sm:px-6 py-2">
+                ← Back
+              </Button>
+            </Link>
+          </div>
+          <div className="text-center">
             <h1 className="text-2xl sm:text-4xl font-bold text-white mb-2 flex items-center justify-center gap-2">
               <img
                 src="/goodnotes.png"
@@ -193,12 +209,12 @@ export default function RegisterPage() {
             {renderStep()}
           </div>
 
-          <div className="flex justify-between gap-4 sm:gap-6 max-w-2xl mx-auto mt-6 sm:mt-8">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 max-w-2xl mx-auto mt-6 sm:mt-8">
             {currentStep > 1 && (
               <Button
                 type="button"
                 onClick={() => setCurrentStep((s) => s - 1)}
-                className="bg-white/20 hover:bg-white/30 text-white px-8 py-2 text-lg"
+                className="bg-white/20 hover:bg-white/30 text-white px-8 py-2 text-lg w-full sm:w-auto"
               >
                 Previous
               </Button>
@@ -208,7 +224,7 @@ export default function RegisterPage() {
               <Button
                 type="button"
                 onClick={() => setCurrentStep((s) => s + 1)}
-                className="ml-auto bg-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/90 text-white px-8 py-2 text-lg"
+                className="ml-auto bg-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/90 text-white px-8 py-2 text-lg w-full sm:w-auto"
               >
                 Next
               </Button>
@@ -216,7 +232,7 @@ export default function RegisterPage() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="ml-auto bg-[var(--red)] hover:bg-[var(--red)]/90 text-white px-8 py-2 text-lg"
+                className="ml-auto bg-[var(--red)] hover:bg-[var(--red)]/90 text-white px-8 py-2 text-lg w-full sm:w-auto"
               >
                 {isSubmitting ? "Submitting..." : "Submit Registration"}
               </Button>
