@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Speakers() {
     return(
-        <section className="py-20 bg-gray-50">
+        <section className="py-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
