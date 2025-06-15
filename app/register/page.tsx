@@ -143,7 +143,7 @@ export default function RegisterPage() {
               className="mx-auto mb-4"
             />
             <Button
-              onClick={() => window.location.href = "/"}
+              onClick={() => (window.location.href = "/")}
               className="bg-white/20 hover:bg-white/30 text-white px-8 py-2"
             >
               Return Home
@@ -155,31 +155,32 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[var(--seafoam)] via-[var(--gnTeal)] to-[var(--canary)] p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[var(--seafoam)] via-[var(--gnTeal)] to-[var(--canary)] p-4 sm:p-8">
       <div className="max-w-2xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <Link href="/" className="absolute top-8 left-8">
-            <Button className="bg-white/20 hover:bg-white/30 text-white px-6 py-2">
+        <div className="flex justify-between items-center mb-6 sm:mb-8">
+          <Link href="/" className="absolute top-4 sm:top-8 left-4 sm:left-8">
+            <Button className="bg-white/20 hover:bg-white/30 text-white px-4 sm:px-6 py-2">
               ← Back
             </Button>
           </Link>
           <div className="text-center flex-1">
-            <h1 className="text-4xl font-bold text-white mb-2 flex items-center justify-center gap-2">
+            <h1 className="text-2xl sm:text-4xl font-bold text-white mb-2 flex items-center justify-center gap-2">
               <img
                 src="/goodnotes.png"
                 alt="GoodNotes Logo"
-                width={32}
-                height={32}
+                width={24}
+                height={24}
+                className="w-6 h-6 sm:w-8 sm:h-8"
               />
               <span>GoodNotes Hackathon</span>
             </h1>
-            <p className="text-white/80 text-lg">
+            <p className="text-white/80 text-base sm:text-lg">
               Join us for an exciting weekend of innovation and creativity
             </p>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
           {error && (
             <div
               className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
@@ -188,11 +189,11 @@ export default function RegisterPage() {
               <span className="block sm:inline">{error}</span>
             </div>
           )}
-          <div className="bg-white/5 backdrop-blur-xl rounded-4xl p-8 shadow-5xl">
+          <div className="bg-white/5 backdrop-blur-xl rounded-3xl sm:rounded-4xl p-4 sm:p-8 shadow-5xl">
             {renderStep()}
           </div>
 
-          <div className="flex justify-between gap-6 max-w-2xl mx-auto mt-8">
+          <div className="flex justify-between gap-4 sm:gap-6 max-w-2xl mx-auto mt-6 sm:mt-8">
             {currentStep > 1 && (
               <Button
                 type="button"

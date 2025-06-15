@@ -22,61 +22,63 @@ export default function ProfileSection({
   onCheckboxChange,
 }: Props) {
   return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-semibold text-white">Profile</h2>
+    <div className="space-y-3 sm:space-y-4">
+      <h2 className="text-lg sm:text-xl font-semibold text-white">Profile</h2>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-start gap-2">
         <input
           type="checkbox"
           name="agreeToTerms"
           checked={formData.agreeToTerms === "Yes"}
           onChange={onCheckboxChange}
-          className="h-4 w-4 rounded border-gray-300 focus:ring-2 focus:ring-[var(--gnTeal)] bg-white/80"
+          className="h-4 w-4 mt-1 rounded border-gray-300 focus:ring-2 focus:ring-[var(--gnTeal)] bg-white/80"
           required
         />
-        <label className="block text-white">
+        <label className="block text-sm sm:text-base text-white">
           Goodnotes has my consent to collect, store, and process my data for
           the purpose of considering me for Hackathon, and for up to 31 August
           2025.
         </label>
       </div>
 
-      <div>
-        <label className="block text-white mb-1">
-          First Name{" "}
-          <span className="text-red-500 ml-1" aria-hidden="true">
-            *
-          </span>
-        </label>
-        <input
-          type="text"
-          name="firstName"
-          value={formData.firstName}
-          onChange={onChange}
-          placeholder="e.g. John"
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
-          autoComplete="given-name"
-          required
-        />
-      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div>
+          <label className="block text-sm sm:text-base text-white mb-1">
+            First Name{" "}
+            <span className="text-red-500 ml-1" aria-hidden="true">
+              *
+            </span>
+          </label>
+          <input
+            type="text"
+            name="firstName"
+            value={formData.firstName}
+            onChange={onChange}
+            placeholder="e.g. John"
+            className="w-full mt-1 p-2 sm:p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition text-sm sm:text-base"
+            autoComplete="given-name"
+            required
+          />
+        </div>
 
-      <div>
-        <label className="block text-white mb-1">
-          Last Name{" "}
-          <span className="text-red-500 ml-1" aria-hidden="true">
-            *
-          </span>
-        </label>
-        <input
-          type="text"
-          name="lastName"
-          value={formData.lastName}
-          onChange={onChange}
-          placeholder="e.g. Doe"
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
-          autoComplete="family-name"
-          required
-        />
+        <div>
+          <label className="block text-sm sm:text-base text-white mb-1">
+            Last Name{" "}
+            <span className="text-red-500 ml-1" aria-hidden="true">
+              *
+            </span>
+          </label>
+          <input
+            type="text"
+            name="lastName"
+            value={formData.lastName}
+            onChange={onChange}
+            placeholder="e.g. Doe"
+            className="w-full mt-1 p-2 sm:p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition text-sm sm:text-base"
+            autoComplete="family-name"
+            required
+          />
+        </div>
       </div>
 
       <div>
@@ -126,7 +128,9 @@ export default function ProfileSection({
         <select
           name="degree"
           value={formData.degree}
-          onChange={(e: ChangeEvent<HTMLSelectElement>) => onChange(e as unknown as ChangeEvent<HTMLInputElement>)}
+          onChange={(e: ChangeEvent<HTMLSelectElement>) =>
+            onChange(e as unknown as ChangeEvent<HTMLInputElement>)
+          }
           className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         >
