@@ -1,11 +1,42 @@
 import Link from "next/link";
 import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
+const quickLinks = [
+  { name: "About", href: "#about" },
+  { name: "Schedule", href: "#timeline" },
+  { name: "Prizes", href: "#prizes" },
+];
+
+const contactInfo = [
+  { 
+    icon: Mail,
+    content: "hackathon@goodnotes.com",
+    href: "mailto:hackathon@goodnotes.com",
+    isLink: true
+  },
+  {
+    icon: Phone,
+    content: "+582 222 222",
+    isLink: false
+  },
+  {
+    icon: MapPin,
+    content: "Hong Kong",
+    isLink: false
+  }
+];
+
+const socialLinks = [
+  { icon: Linkedin, href: "#" },
+  { icon: Instagram, href: "#" },
+  { icon: Mail, href: "mailto:hackathon@goodnotes.com" }
+];
+
 export function Footer() {
   return (
     <footer className="bg-[var(--seafoam)] text-gray-300">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">
@@ -22,69 +53,16 @@ export function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
-                  Schedule
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
-                  Prizes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
-                  Sponsors
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
-                  Community
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
-                  FAQ
-                </a>
-              </li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="hover:text-[var(--gnTeal)] transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -94,23 +72,21 @@ export function Footer() {
               Contact Us
             </h4>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[var(--gnTeal)]" />
-                <a
-                  href="mailto:hackathon@goodnotes.com"
-                  className="hover:text-[var(--gnTeal)] transition-colors"
-                >
-                  hackathon@goodnotes.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[var(--gnTeal)]" />
-                <span>+582 222 222</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[var(--gnTeal)]" />
-                <span>Hong Kong</span>
-              </li>
+              {contactInfo.map((item, index) => (
+                <li key={index} className="flex items-center gap-2">
+                  <item.icon className="w-4 h-4 text-[var(--gnTeal)]" />
+                  {item.isLink ? (
+                    <a
+                      href={item.href}
+                      className="hover:text-[var(--gnTeal)] transition-colors"
+                    >
+                      {item.content}
+                    </a>
+                  ) : (
+                    <span>{item.content}</span>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -118,24 +94,15 @@ export function Footer() {
         {/* Social Links */}
         <div className="pt-10">
           <div className="flex justify-center gap-6">
-            <a
-              href="#"
-              className="hover:text-[var(--gnTeal)] transition-colors"
-            >
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a
-              href="#"
-              className="hover:text-[var(--gnTeal)] transition-colors"
-            >
-              <Instagram className="w-6 h-6" />
-            </a>
-            <a
-              href="mailto:hackathon@goodnotes.com"
-              className="hover:text-[var(--gnTeal)] transition-colors"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                className="hover:text-[var(--gnTeal)] transition-colors"
+              >
+                <social.icon className="w-6 h-6" />
+              </a>
+            ))}
           </div>
         </div>
 
