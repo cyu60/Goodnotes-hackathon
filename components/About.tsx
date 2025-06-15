@@ -3,7 +3,10 @@ import { Lightbulb, Code2, Users } from "lucide-react";
 
 export function About() {
   return (
-    <section className="py-20 bg-gradient-to-bl from-[var(--canary)] via-[var(--gnTeal)] to-[var(--white)]">
+    <section
+      id="about"
+      className="py-20 bg-gradient-to-bl from-[var(--canary)] via-[var(--gnTeal)] to-[var(--white)]"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div className="space-y-4">

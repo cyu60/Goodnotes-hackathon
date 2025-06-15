@@ -43,6 +43,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-[var(--seafoam)] px-8 py-3 text-lg font-semibold rounded-full"
+              onClick={() => (window.location.href = "#about")}
             >
               Learn More
             </Button>
