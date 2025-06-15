@@ -5,7 +5,7 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "motion/react";
+} from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const FloatingNav = ({
@@ -55,7 +55,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-4 left-1/2 -translate-x-1/2 border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-[var(--gnTeal)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-8 py-2 items-center justify-center space-x-4",
+          "flex max-w-fit fixed top-4 left-1/2 -translate-x-1/2 border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-[var(--gnTeal)]/90 backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-4 sm:px-8 py-2 items-center justify-center space-x-2 sm:space-x-4",
           className
         )}
       >
@@ -64,13 +64,14 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative text-white items-center flex space-x-1 hover:text-neutral-200"
+              "relative text-white items-center flex space-x-1 hover:text-neutral-200 text-sm sm:text-base"
             )}
           >
-            <span className="hidden sm:block text-lg">{navItem.name}</span>
+            {navItem.icon && <span>{navItem.icon}</span>}
+            <span>{navItem.name}</span>
           </a>
         ))}
-        <a href="/register" className="border text-sm font-medium relative border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-[var(--gnTeal)]">
+        <a href="/register" className="border text-xs sm:text-sm font-medium relative border-white text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full hover:bg-white hover:text-[var(--gnTeal)]">
           <span>Register</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
         </a>
