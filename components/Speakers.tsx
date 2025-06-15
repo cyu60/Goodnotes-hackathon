@@ -16,7 +16,7 @@ export function Speakers() {
                             <div className="flex flex-col items-start gap-4">
                                 <div className="w-full aspect-[4/3] relative rounded-lg overflow-hidden">
                                     <Image 
-                                        src="/placeholder-speaker-1.jpg"
+                                        src="/goodnotes.png"
                                         alt="Speaker 1"
                                         fill
                                         className="object-cover"
@@ -39,7 +39,7 @@ export function Speakers() {
                             <div className="flex flex-col items-start gap-4">
                                 <div className="w-full aspect-[4/3] relative rounded-lg overflow-hidden">
                                     <Image 
-                                        src="/placeholder-speaker-2.jpg"
+                                        src="/goodnotes.png"
                                         alt="Speaker 2"
                                         fill
                                         className="object-cover"
@@ -62,8 +62,8 @@ export function Speakers() {
                             <div className="flex flex-col items-start gap-4">
                                 <div className="w-full aspect-[4/3] relative rounded-lg overflow-hidden">
                                     <Image 
-                                        src="/placeholder-speaker-3.jpg"
-                                        alt="Speaker 3"
+                                        src="/goodnotes.png"
+                                        alt="Speaker 3" 
                                         fill
                                         className="object-cover"
                                     />
