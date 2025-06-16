@@ -25,6 +25,9 @@ export function Hero() {
               />
               <span>MentorMates</span>
             </div>
+            <div className="text-xl md:text-2xl text-[var(--seafoam)] font-semibold bg-[var(--seafoam)]/20 border-2 border-[var(--seafoam)] rounded-full px-4 py-2">
+              June 11-12, 2025
+            </div>
           </div>
           <p className="text-lg md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed px-4">
             Join innovators, creators, and problem-solvers in building the
