@@ -14,6 +14,14 @@ const navItems = [
         name: "Speakers",
         link: "#speakers",
     },
+    {
+        name: "Prizes",
+        link: "#prizes",
+    },
+    {
+        name: "Sponsor",
+        link: "#sponsor",
+    }
 ];
 
 export default function Navbar() {

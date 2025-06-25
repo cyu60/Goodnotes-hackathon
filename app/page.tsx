@@ -4,7 +4,7 @@ import { About } from "@/components/About";
 import { Timeline } from "@/components/Timeline";
 import { Prizes } from "@/components/Prizes";
 import {Speakers}  from "@/components/Speakers";
-// import { Sponsors } from "@/components/Sponsors";
+import { Sponsors } from "@/components/Sponsors";
 import { Footer } from "@/components/Footer";
 
 export default function HackathonLanding() {
@@ -16,7 +16,7 @@ export default function HackathonLanding() {
       <Timeline />
       <Speakers />
       <Prizes />
-      {/* <Sponsors /> */}
+      <Sponsors />
       <Footer />
     </div>
   );

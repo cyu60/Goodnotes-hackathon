@@ -1,39 +1,53 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Building2 } from "lucide-react";
+import Image from "next/image";
 
 export function Sponsors() {
   return (
-    <section className="py-20 bg-white">
+    <section id="sponsor" className="py-20 bg-white ">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-          Our <span className="text-[var(--seafoam)]">Sponsors</span>
+          About the <span className="text-[var(--seafoam)]">Sponsor</span>
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
-          {/* Sponsor logos would go here */}
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-            <Card
-              key={i}
-              className="border-none shadow-lg hover:shadow-xl transition-shadow"
-            >
-              <CardContent className="p-8 flex items-center justify-center">
-                <div className="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <Building2 className="w-12 h-12 text-gray-400" />
+        <div className="max-w-4xl mx-auto">
+          <Card className="border-none shadow-xl">
+            <CardContent className="p-12">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-8">
+                  <Image
+                    src="/goodnotes.png"
+                    alt="Goodnotes Logo"
+                    width={200}
+                    height={80}
+                    className="mx-auto"
+                  />
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+                
+                <div className="space-y-6">
+                  
+                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    Goodnotes is the leading AI digital paper used by millions of people worldwide. 
+                    Launched in 2011, Goodnotes started as an improvement to physical paper notes — 
+                    introducing the ability to take handwritten digital notes, search handwritten text, 
+                    and organize everything into a digital library.
+                  </p>
+                  
+                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    Today, Goodnotes continues to pioneer technological innovations in productivity, 
+                    featuring advances such as the world's first generative AI for handwriting and 
+                    in-app AI assistant Ask Goodnotes.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
-        <div className="text-center">
+        <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">
-            Want to be a sponsor? Join us in supporting the next generation of
-            innovators!
+            Thank you to Goodnotes for making this hackathon possible!
           </p>
-          <button className="bg-[var(--seafoam)] text-white px-8 py-3 rounded-full hover:bg-[var(--seafoam)]/90 transition-colors">
-            Become a Sponsor
-          </button>
         </div>
       </div>
     </section>

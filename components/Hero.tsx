@@ -9,21 +9,21 @@ export function Hero() {
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="flex flex-col items-center gap-4">
             <img
-              src={"../goodnotes.png"}
+              src={"../mentormates.png"}
               alt="Goodnotes"
               className="w-16 h-16 md:w-24 md:h-24"
             />
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight">
-              Goodnotes Hackathon
+              MentorMates Hackathon
             </h1>
             <div className="flex items-center gap-2 text-lg md:text-2xl">
-              <span>powered by</span>
+              <span>Sponsored by</span>
               <img
-                src={"../mentormates.png"}
-                alt="Mentormates"
+                src={"../goodnotes.png"}
+                alt="Goodnotes"
                 className="w-6 h-6 md:w-8 md:h-8"
               />
-              <span>MentorMates</span>
+              <span>Goodnotes</span>
             </div>
           </div>
           <p className="text-lg md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed px-4">

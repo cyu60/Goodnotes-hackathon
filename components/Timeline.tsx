@@ -1,13 +1,16 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { UserPlus, Users, Zap, Award, Trophy } from "lucide-react";
+import { UserPlus, Users, Zap, Award, Trophy, Mic, Coffee, BookOpen, Lightbulb, Target } from "lucide-react";
+import { useState } from "react";
 
-const events = [
+const day1Events = [
   {
     title: "Arrival & Registration",
     description:
-      "Check in, get your swag, and enjoy breakfast while networking with fellow participants.",
-    time: "9:00 AM - 10:00 AM",
+      "Check in, get your name badges and swag, enjoy light breakfast or coffee while networking with fellow participants.",
+    time: "9:00 AM - 9:30 AM",
     color: "red",
     icon: <UserPlus className="w-6 h-6 text-[var(--red)]" />,
     iconBg: "bg-[var(--red)]/10",
@@ -15,61 +18,176 @@ const events = [
     badge: "bg-[var(--red)]/10 text-[var(--red)] hover:bg-[var(--red)]/20",
   },
   {
-    title: "Fireside Chats",
+    title: "Opening Keynote",
     description:
-      "Engaging discussions on education perspectives and technology trends with industry experts.",
-    time: "10:00 AM - 12:00 PM",
+      '"Reimagining Learning in the AI Era" - A compelling narrative around the role of technology, creativity, and inclusivity in learning.',
+    time: "9:30 AM - 10:00 AM",
     color: "apple",
-    icon: <Users className="w-6 h-6 text-[var(--apple)]" />,
+    icon: <Mic className="w-6 h-6 text-[var(--apple)]" />,
     iconBg: "bg-[var(--apple)]/10",
     border: "border-l-[var(--apple)]",
-    badge:
-      "bg-[var(--apple)]/10 text-[var(--apple)] hover:bg-[var(--apple)]/20",
+    badge: "bg-[var(--apple)]/10 text-[var(--apple)] hover:bg-[var(--apple)]/20",
+  },
+  {
+    title: "Fireside Chat: Education Perspectives",
+    description: "How technology is shaping diverse classrooms and disciplines. Featuring educators from special education, music, fashion, and more.",
+    time: "10:00 AM - 11:00 AM",
+    color: "gnTeal",
+    icon: <Users className="w-6 h-6 text-[var(--gnTeal)]" />,
+    iconBg: "bg-[var(--gnTeal)]/10",
+    border: "border-l-[var(--gnTeal)]",
+    badge: "bg-[var(--gnTeal)]/10 text-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/20",
+  },
+  {
+    title: "Fireside Chat: Technology Trends",
+    description: "Exploring emerging technologies and research directions with technical mentors from Goodnotes. Learn about LLMs, AI-assisted note-taking, and smart annotations.",
+    time: "11:15 AM - 12:00 PM",
+    color: "seafoam",
+    icon: <Zap className="w-6 h-6 text-[var(--seafoam)]" />,
+    iconBg: "bg-[var(--seafoam)]/10",
+    border: "border-l-[var(--seafoam)]",
+    badge: "bg-[var(--seafoam)]/10 text-[var(--seafoam)] hover:bg-[var(--seafoam)]/20",
   },
   {
     title: "Ideation & Team Formation",
-    description: "Form teams and brainstorm project ideas over lunch.",
+    description: "Casual table discussions during lunch. Connect education insights and tech sparks into project ideas with guided prompts.",
     time: "12:00 PM - 1:00 PM",
-    color: "gnTeal",
-    icon: <Zap className="w-6 h-6 text-[var(--gnTeal)]" />,
-    iconBg: "bg-[var(--gnTeal)]/10",
-    border: "border-l-[var(--gnTeal)]",
-    badge:
-      "bg-[var(--gnTeal)]/10 text-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/20",
-  },
-  {
-    title: "Hack Time",
-    description:
-      "Build your project with support from technical and education mentors.",
-    time: "1:00 PM - 5:00 PM",
     color: "canary",
-    icon: <Award className="w-6 h-6 text-yellow-700" />,
+    icon: <Lightbulb className="w-6 h-6 text-yellow-700" />,
     iconBg: "bg-[var(--canary)]/20",
     border: "border-l-[var(--canary)]",
     badge: "bg-[var(--canary)]/20 text-yellow-700 hover:bg-[var(--canary)]/30",
   },
   {
-    title: "Pitching & Wrap-up",
+    title: "Hack Time: Build Your Project",
     description:
-      "Learn pitching techniques and showcase your work in lightning presentations.",
-    time: "5:00 PM - 6:00 PM",
+      "Teams form and start building with mentor support on technical architecture, education use cases, and UX feedback.",
+    time: "1:00 PM - 5:00 PM",
+    color: "red",
+    icon: <Award className="w-6 h-6 text-[var(--red)]" />,
+    iconBg: "bg-[var(--red)]/10",
+    border: "border-l-[var(--red)]",
+    badge: "bg-[var(--red)]/10 text-[var(--red)] hover:bg-[var(--red)]/20",
+  },
+  {
+    title: "Pitching Workshop",
+    description:
+      "Learn how to frame your story: Problem → Insight → Solution. Tips on timing, visuals, and confidence for your presentations.",
+    time: "5:00 PM - 5:30 PM",
+    color: "apple",
+    icon: <Target className="w-6 h-6 text-[var(--apple)]" />,
+    iconBg: "bg-[var(--apple)]/10",
+    border: "border-l-[var(--apple)]",
+    badge: "bg-[var(--apple)]/10 text-[var(--apple)] hover:bg-[var(--apple)]/20",
+  },
+  {
+    title: "Wrap-Up & Optional Showcase",
+    description:
+      "Lightning pitches, feedback wall for peer voting, and networking to close out the day.",
+    time: "5:30 PM onwards",
+    color: "gnTeal",
+    icon: <Trophy className="w-6 h-6 text-[var(--gnTeal)]" />,
+    iconBg: "bg-[var(--gnTeal)]/10",
+    border: "border-l-[var(--gnTeal)]",
+    badge: "bg-[var(--gnTeal)]/10 text-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/20",
+  },
+];
+
+const day2Events = [
+  {
+    title: "Morning Check-in & Coffee",
+    description:
+      "Start your hackathon day with coffee, light breakfast, and connecting with your team.",
+    time: "8:30 AM - 9:00 AM",
+    color: "red",
+    icon: <Coffee className="w-6 h-6 text-[var(--red)]" />,
+    iconBg: "bg-[var(--red)]/10",
+    border: "border-l-[var(--red)]",
+    badge: "bg-[var(--red)]/10 text-[var(--red)] hover:bg-[var(--red)]/20",
+  },
+  {
+    title: "Full Hackathon Session",
+    description:
+      "Intensive building time with continuous mentor support. Develop, iterate, and refine your EdTech solutions.",
+    time: "9:00 AM - 5:30 PM",
+    color: "apple",
+    icon: <Award className="w-6 h-6 text-[var(--apple)]" />,
+    iconBg: "bg-[var(--apple)]/10",
+    border: "border-l-[var(--apple)]",
+    badge: "bg-[var(--apple)]/10 text-[var(--apple)] hover:bg-[var(--apple)]/20",
+  },
+  {
+    title: "Project Finalization",
+    description:
+      "Polish your presentations, test your demos, and prepare for the final showcase.",
+    time: "5:30 PM - 6:30 PM",
+    color: "gnTeal",
+    icon: <Target className="w-6 h-6 text-[var(--gnTeal)]" />,
+    iconBg: "bg-[var(--gnTeal)]/10",
+    border: "border-l-[var(--gnTeal)]",
+    badge: "bg-[var(--gnTeal)]/10 text-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/20",
+  },
+  {
+    title: "Final Presentations",
+    description:
+      "Teams present their innovative EdTech solutions to judges and the community.",
+    time: "6:30 PM - 7:30 PM",
     color: "seafoam",
-    icon: <Trophy className="w-6 h-6 text-[var(--seafoam)]" />,
+    icon: <Mic className="w-6 h-6 text-[var(--seafoam)]" />,
     iconBg: "bg-[var(--seafoam)]/10",
     border: "border-l-[var(--seafoam)]",
-    badge:
-      "bg-[var(--seafoam)]/10 text-[var(--seafoam)] hover:bg-[var(--seafoam)]/20",
+    badge: "bg-[var(--seafoam)]/10 text-[var(--seafoam)] hover:bg-[var(--seafoam)]/20",
+  },
+  {
+    title: "Awards & Closing Ceremony",
+    description:
+      "Celebrate the winners, network with participants, and wrap up an amazing hackathon experience.",
+    time: "7:30 PM - 8:00 PM",
+    color: "canary",
+    icon: <Trophy className="w-6 h-6 text-yellow-700" />,
+    iconBg: "bg-[var(--canary)]/20",
+    border: "border-l-[var(--canary)]",
+    badge: "bg-[var(--canary)]/20 text-yellow-700 hover:bg-[var(--canary)]/30",
   },
 ];
 
 export function Timeline() {
+  const [activeDay, setActiveDay] = useState<'day1' | 'day2'>('day1');
+  const events = activeDay === 'day1' ? day1Events : day2Events;
+
   return (
     <section id="timeline" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
             Event <span className="text-[var(--seafoam)]">Timeline</span>
           </h2>
+
+          {/* Day Tabs */}
+          <div className="flex justify-center mb-12">
+            <div className="bg-gray-100 rounded-lg p-1 flex gap-1">
+              <button
+                onClick={() => setActiveDay('day1')}
+                className={`px-6 py-3 rounded-md font-semibold transition-all duration-200 ${
+                  activeDay === 'day1'
+                    ? 'bg-[var(--seafoam)] text-white shadow-sm'
+                    : 'text-gray-600 hover:text-gray-800'
+                }`}
+              >
+                Day 1 - Friday, July 11
+              </button>
+              <button
+                onClick={() => setActiveDay('day2')}
+                className={`px-6 py-3 rounded-md font-semibold transition-all duration-200 ${
+                  activeDay === 'day2'
+                    ? 'bg-[var(--seafoam)] text-white shadow-sm'
+                    : 'text-gray-600 hover:text-gray-800'
+                }`}
+              >
+                Day 2 - Saturday, July 12
+              </button>
+            </div>
+          </div>
 
           <div className="relative">
             {/* Timeline line for mobile/desktop */}

@@ -1,35 +1,28 @@
-import Link from "next/link";
-import { Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter} from "react-icons/fa6";
 
 const quickLinks = [
   { name: "About", href: "#about" },
   { name: "Schedule", href: "#timeline" },
   { name: "Prizes", href: "#prizes" },
+  { name: "Sponsor", href: "#sponsor" },
 ];
 
 const contactInfo = [
   { 
     icon: Mail,
-    content: "hackathon@goodnotes.com",
-    href: "mailto:hackathon@goodnotes.com",
+    content: "mentormatesofficial@gmail.com",
+    href: "mailto:mentormatesofficial@gmail.com",
     isLink: true
   },
-  {
-    icon: Phone,
-    content: "+582 222 222",
-    isLink: false
-  },
-  {
-    icon: MapPin,
-    content: "Hong Kong",
-    isLink: false
-  }
 ];
 
 const socialLinks = [
-  { icon: Linkedin, href: "#" },
-  { icon: Instagram, href: "#" },
-  { icon: Mail, href: "mailto:hackathon@goodnotes.com" }
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/mentor-mates-a6898036b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+  { icon: FaInstagram, href: "https://www.instagram.com/mentormates.official/" },
+  { icon: FaXTwitter, href: "https://x.com/mentormates" },
+  { icon: Mail, href: "mailto:mentormatesofficial@gmail.com" }
 ];
 
 export function Footer() {
@@ -40,7 +33,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">
-              Goodnotes x MentorMates Hackathon
+              MentorMates Hackathon, Sponsored by Goodnotes
             </h3>
             <p className="text-gray-200">
               Building the future of digital note-taking and productivity.
@@ -109,7 +102,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-4 text-center text-gray-200">
           <p>
-            &copy; {new Date().getFullYear()} Goodnotes Hackathon. All rights
+            &copy; {new Date().getFullYear()} MentorMates. All rights
             reserved.
           </p>
         </div>

@@ -15,10 +15,11 @@ export function About() {
               <span className="text-[var(--canary)]">Collaboration</span>
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Our hackathon brings together passionate developers, designers,
-              and entrepreneurs to tackle real-world challenges. We believe in
-              the power of diverse minds working together to create solutions
-              that matter.
+              This hackathon is organized by MentorMates to bring together
+              passionate developers, designers, and entrepreneurs from across
+              the region to tackle real-world challenges. We believe in the
+              power of diverse minds working together to create solutions that
+              matter.
             </p>
           </div>
 
