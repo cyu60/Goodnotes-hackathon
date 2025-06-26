@@ -21,7 +21,7 @@ export function Hero() {
               <img
                 src={"../goodnotes.png"}
                 alt="Goodnotes"
-                className="w-6 h-6 md:w-8 md:h-8"
+                className="w-50 h-14 md:w-100 md:h-26"
               />
               <span>Goodnotes</span>
             </div>

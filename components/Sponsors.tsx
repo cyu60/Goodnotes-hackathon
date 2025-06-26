@@ -14,7 +14,7 @@ export function Sponsors() {
           <Card className="border-none shadow-xl">
             <CardContent className="p-12">
               <div className="flex flex-col items-center text-center">
-                <div className="mb-8">
+                <div className="mb-8 rounded-lg overflow-hidden">
                   <Image
                     src="/goodnotes.png"
                     alt="Goodnotes Logo"
