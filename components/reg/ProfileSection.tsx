@@ -2,44 +2,24 @@ import { ChangeEvent } from "react";
 
 type Props = {
   formData: {
-    agreeToTerms: string;
     firstName: string;
     lastName: string;
+    phone_num: string;
     email: string;
     school: string;
     degree: string;
     discipline: string;
     year: string;
     expectedGradYear: string;
+    how_stats: string;
   };
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onCheckboxChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
 };
 
-export default function ProfileSection({
-  formData,
-  onChange,
-  onCheckboxChange,
-}: Props) {
+export default function ProfileSection({ formData, onChange }: Props) {
   return (
     <div className="space-y-3 sm:space-y-4">
       <h2 className="text-lg sm:text-xl font-semibold text-white">Profile</h2>
-
-      <div className="flex items-start gap-2">
-        <input
-          type="checkbox"
-          name="agreeToTerms"
-          checked={formData.agreeToTerms === "Yes"}
-          onChange={onCheckboxChange}
-          className="h-4 w-4 mt-1 rounded border-gray-300 focus:ring-2 focus:ring-[var(--gnTeal)] bg-white/80"
-          required
-        />
-        <label className="block text-sm sm:text-base text-white">
-          Goodnotes has my consent to collect, store, and process my data for
-          the purpose of considering me for Hackathon, and for up to 31 August
-          2025.
-        </label>
-      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div>
@@ -79,6 +59,24 @@ export default function ProfileSection({
             required
           />
         </div>
+      </div>
+
+      <div>
+        <label className="block text-white mb-1">
+          Phone Number{" "}
+          <span className="text-red-500 ml-1" aria-hidden="true">
+            *
+          </span>
+        </label>
+        <input
+          type="text"
+          name="phone_num"
+          value={formData.phone_num}
+          onChange={onChange}
+          placeholder="e.g. +1 555-555-5555"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          required
+        />
       </div>
 
       <div>
@@ -128,9 +126,7 @@ export default function ProfileSection({
         <select
           name="degree"
           value={formData.degree}
-          onChange={(e: ChangeEvent<HTMLSelectElement>) =>
-            onChange(e as unknown as ChangeEvent<HTMLInputElement>)
-          }
+          onChange={onChange}
           className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         >
@@ -192,6 +188,24 @@ export default function ProfileSection({
           name="expectedGradYear"
           value={formData.expectedGradYear}
           onChange={onChange}
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          required
+        />
+      </div>
+
+      <div>
+        <label className="block text-white mb-1">
+          How did you hear about the MentorMates hackathon?{" "}
+          <span className="text-red-500 ml-1" aria-hidden="true">
+            *
+          </span>
+        </label>
+        <input
+          type="text"
+          name="how_stats"
+          value={formData.how_stats}
+          onChange={onChange}
+          placeholder="e.g. From a friend, social media, or university newsletter."
           className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />

@@ -8,19 +8,15 @@ export async function POST(request: Request) {
         const requiredFields = [
             'firstName',
             'lastName',
+            'phone_num',
             'email',
             'school',
             'degree',
             'discipline',
             'year',
             'expectedGradYear',
-            'q_experience',
-            'q_background',
-            'q_goals',
             'how_stats',
-            'resume',
-            'agreeToTerms',
-            'confirmResume'
+            'confirmData'
         ];
 
         const fieldStatus = requiredFields.map(field => ({
@@ -47,21 +43,38 @@ export async function POST(request: Request) {
         const formData = new URLSearchParams();
         
         const formMapping = {
-            "entry.1036871479": data.agreeToTerms,
-            "entry.546651345": data.firstName,
-            "entry.1085819250": data.lastName,
-            "entry.995361391": data.email,
-            "entry.914222488": data.school,
-            "entry.549486355": data.degree,
-            "entry.242062961": data.discipline,
-            "entry.971328453": data.year,
-            "entry.717460292": data.expectedGradYear,
-            "entry.1209593982": data.q_experience,
-            "entry.1906901182": data.q_background,
-            "entry.360517156": data.q_goals,
-            "entry.1861936621": data.how_stats,
-            "entry.785234570": data.resume,
-            "entry.406871332": data.confirmResume
+            // First Name
+            "entry.1611259998": data.firstName,
+            // Last Name
+            "entry.438556156": data.lastName,
+            // Phone number
+            "entry.112048001": data.phone_num,
+            // Email
+            "entry.242018488": data.email,
+            // School
+            "entry.1516008500": data.school,
+            // Degree
+            "entry.1444091658": data.degree,
+            // Discipline
+            "entry.1378784663": data.discipline,
+            // Year of Study
+            "entry.1512254965": data.year,
+            // Expected Year of Graduation
+            "entry.730672657": data.expectedGradYear,
+            // Resume (optional)
+            "entry.1319080282": data.resume,
+            // Experience (optional)
+            "entry.1713755840": data.q_experience,
+            // Background (optional)
+            "entry.1326196853": data.q_background,
+            // Goals (optional)
+            "entry.451350810": data.q_goals,
+            // Team (optional)
+            "entry.420248234": data.team,
+            // How did you hear about the hackathon?
+            "entry.677189088": data.how_stats,
+            // Declaration checkbox
+            "entry.613447457": data.confirmData
         };
 
         Object.entries(formMapping).forEach(([key, value]) => {
@@ -71,6 +84,7 @@ export async function POST(request: Request) {
         });
 
         console.log("Submitting to Google Form with data:", Object.fromEntries(formData));
+        console.log("Form data string:", formData.toString());
 
         const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSf8WYtZ2g07XHd-D8TMUu1fyQjZAOK3kKPVbWfhaDHU5jCSIw/formResponse", {
             method: "POST",
@@ -86,7 +100,8 @@ export async function POST(request: Request) {
             credentials: "omit",
         });
 
-        console.log("Google Form submission completed");
+        console.log("Google Form submission response status:", response.status);
+        console.log("Google Form submission response ok:", response.ok);
         
         return NextResponse.json({
             success: true,

@@ -31,10 +31,9 @@ export default function RegisterPage() {
   }, []);
 
   const [formData, setFormData] = useState({
-    agreeToTerms: "",
-    confirmResume: "",
     firstName: "",
     lastName: "",
+    phone_num: "",
     email: "",
     school: "",
     degree: "",
@@ -46,10 +45,12 @@ export default function RegisterPage() {
     q_goals: "",
     how_stats: "",
     resume: "",
+    team: "",
+    confirmData: "",
   });
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -64,6 +65,33 @@ export default function RegisterPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
+
+    // Validate all required fields
+    const requiredFields = [
+      "firstName",
+      "lastName",
+      "phone_num",
+      "email",
+      "school",
+      "degree",
+      "discipline",
+      "year",
+      "expectedGradYear",
+      "how_stats",
+      "confirmData",
+    ];
+
+    const missingFields = requiredFields.filter(
+      (field) => !formData[field as keyof typeof formData]
+    );
+
+    if (missingFields.length > 0) {
+      setError(
+        `Please fill in all required fields: ${missingFields.join(", ")}`
+      );
+      setIsSubmitting(false);
+      return;
+    }
 
     // Log the form data before submission
     console.log("Submitting form data:", formData);
@@ -98,13 +126,7 @@ export default function RegisterPage() {
   const renderStep = () => {
     switch (currentStep) {
       case 1:
-        return (
-          <ProfileSection
-            formData={formData}
-            onChange={handleChange}
-            onCheckboxChange={handleCheckboxChange}
-          />
-        );
+        return <ProfileSection formData={formData} onChange={handleChange} />;
       case 2:
         return <QuestionsSection formData={formData} onChange={handleChange} />;
       case 3:
@@ -122,10 +144,9 @@ export default function RegisterPage() {
 
   const resetForm = () => {
     setFormData({
-      agreeToTerms: "",
-      confirmResume: "",
       firstName: "",
       lastName: "",
+      phone_num: "",
       email: "",
       school: "",
       degree: "",
@@ -137,6 +158,8 @@ export default function RegisterPage() {
       q_goals: "",
       how_stats: "",
       resume: "",
+      team: "",
+      confirmData: "",
     });
     setCurrentStep(1);
     setIsSubmitted(false);
