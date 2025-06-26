@@ -46,10 +46,10 @@ export function Sponsors() {
               <div className="flex flex-col items-center text-center">
                 <div className="mb-8 shadow-lg rounded-lg overflow-hidden">
                   <Image
-                    src="/goodnotes.png"
+                    src="/Goodnotes_White Background.png"
                     alt="Goodnotes Logo"
-                    width={200}
-                    height={80}
+                    width={500}
+                    height={250}
                     className="mx-auto"
                   />
                 </div>
@@ -94,6 +94,7 @@ export function Sponsors() {
         />
 
         <div className="text-center mt-12">
+
           <p className="text-gray-600 px-4 py-2 rounded-lg">
             Thank you to Goodnotes for making this hackathon possible!
           </p>
