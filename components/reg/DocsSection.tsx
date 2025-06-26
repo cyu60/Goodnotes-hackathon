@@ -14,6 +14,14 @@ export default function DocsSection({
   onChange,
   onCheckboxChange,
 }: Props) {
+  // Custom handler for Google Forms checkbox value
+  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    onChange({
+      target: { name, value: checked ? "YES" : "" },
+    } as any);
+  };
+
   return (
     <div className="space-y-4 px-4 sm:px-0">
       <h2 className="text-xl font-semibold text-white">Documents</h2>
@@ -39,8 +47,8 @@ export default function DocsSection({
         <input
           type="checkbox"
           name="confirmData"
-          checked={formData.confirmData === "Yes"}
-          onChange={onCheckboxChange}
+          checked={formData.confirmData === "YES"}
+          onChange={handleCheckboxChange}
           className="h-4 w-4 mt-1 sm:mt-0 rounded border-gray-300 focus:ring-2 focus:ring-[var(--gnTeal)] bg-white/80"
           required
         />
