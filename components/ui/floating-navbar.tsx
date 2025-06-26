@@ -26,7 +26,8 @@ export const FloatingNav = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      const previous = scrollYProgress.getPrevious();
+      const direction = previous !== undefined ? current - previous : 0;
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
@@ -71,7 +72,10 @@ export const FloatingNav = ({
             <span>{navItem.name}</span>
           </a>
         ))}
-        <a href="/register" className="border text-xs sm:text-sm font-medium relative border-white text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full hover:bg-white hover:text-[var(--gnTeal)]">
+        <a
+          href="/register"
+          className="border text-xs sm:text-sm font-medium relative border-white text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full hover:bg-white hover:text-[var(--gnTeal)]"
+        >
           <span>Register</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
         </a>

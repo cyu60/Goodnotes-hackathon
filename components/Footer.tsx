@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter} from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 const quickLinks = [
   { name: "About", href: "#about" },
@@ -10,19 +10,43 @@ const quickLinks = [
 ];
 
 const contactInfo = [
-  { 
+  {
     icon: Mail,
     content: "mentormatesofficial@gmail.com",
     href: "mailto:mentormatesofficial@gmail.com",
-    isLink: true
+    isLink: true,
+  },
+  {
+    icon: FaLinkedin,
+    content: "linkedin.com/in/mentor-mates-a6898036b",
+    href: "https://www.linkedin.com/in/mentor-mates-a6898036b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    isLink: true,
+  },
+  {
+    icon: FaInstagram,
+    content: "instagram.com/mentormates.official",
+    href: "https://instagram.com/mentormates.official",
+    isLink: true,
+  },
+  {
+    icon: FaXTwitter,
+    content: "x.com/mentormates",
+    href: "https://x.com/mentormates",
+    isLink: true,
   },
 ];
 
 const socialLinks = [
-  { icon: FaLinkedin, href: "https://www.linkedin.com/in/mentor-mates-a6898036b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
-  { icon: FaInstagram, href: "https://www.instagram.com/mentormates.official/" },
+  {
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/in/mentor-mates-a6898036b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  },
+  {
+    icon: FaInstagram,
+    href: "https://instagram.com/mentormates.official",
+  },
   { icon: FaXTwitter, href: "https://x.com/mentormates" },
-  { icon: Mail, href: "mailto:mentormatesofficial@gmail.com" }
+  { icon: Mail, href: "mailto:mentormatesofficial@gmail.com" },
 ];
 
 export function Footer() {
@@ -32,8 +56,11 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
+            <h3 className="text-xl font-bold text-white">
+              MentorMates Hackathon
+            </h3>
             <h3 className="text-xl font-bold text-white mb-4">
-              MentorMates Hackathon, Sponsored by Goodnotes
+              Sponsored by Goodnotes
             </h3>
             <p className="text-gray-200">
               Building the future of digital note-taking and productivity.
@@ -102,8 +129,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-4 text-center text-gray-200">
           <p>
-            &copy; {new Date().getFullYear()} MentorMates. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} MentorMates. All rights reserved.
           </p>
         </div>
       </div>

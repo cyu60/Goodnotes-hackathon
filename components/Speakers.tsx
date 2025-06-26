@@ -1,5 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+"use client"
+import { Card, CardContent} from "@/components/ui/card";
 import Image from "next/image";
+import { useState } from "react";
 
 const speakers = [
   {
@@ -13,7 +15,7 @@ const speakers = [
     ]
   },
   {
-    name: "Dr. Donald Chan Ka Long",
+    name: "Dr. Donald Chan Ka Long", 
     role: "Lecturer & Deputy Director, Natural Sciences Programme, CUHK",
     description: "An accomplished chemist and educator at The Chinese University of Hong Kong, specializing in environmental applications of advanced materials and analytical chemistry. Dr. Chan combines cutting-edge research in environmental science with innovative teaching methodologies, contributing to sustainable chemistry solutions and materials characterization.",
     image: "/mentormates.png",
@@ -40,53 +42,60 @@ const speakers = [
 ];
 
 export function Speakers() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
   return (
-    <section id="speakers" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="speakers" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Meet Our <span className="text-[var(--seafoam)]">Speakers</span>
-          </h2>
-          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-            Join us to learn from industry experts and thought leaders who are shaping the future of technology and innovation
-          </p>
+          <div className="flex flex-col items-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-center">
+              Meet Our <span className="text-[var(--seafoam)]">Mentors</span>
+            </h2>
+            <p className="text-lg text-gray-600 mt-4 text-center">
+              Learn from industry experts and academic leaders
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {speakers.map((speaker, index) => (
-              <Card key={index} className="group hover:scale-105 transition-transform duration-300 bg-white border border-gray-100 shadow-xl overflow-hidden">
-                <CardHeader className="p-0">
-                  <div className="relative h-64 w-full">
+              <Card 
+                key={index} 
+                className="bg-gradient-to-br from-[#1a1f36] to-[#121627] text-white border-2 border-gray-700 rounded-xl hover:border-[var(--seafoam)]/50 transition-all rounded-2xl"
+              >
+                <CardContent className="p-8">
+                  <div className="mb-6">
                     <Image
                       src={speaker.image}
                       alt={speaker.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      width={80}
+                      height={80}
+                      className="rounded-full"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <CardTitle className="text-2xl font-bold mb-2">{speaker.name}</CardTitle>
-                  <p className="text-[var(--seafoam)] font-medium mb-2">{speaker.role}</p>
-                  <p className="text-gray-600 mb-3">{speaker.description}</p>
-                  {speaker.urls.length > 0 && (
-                    <div className="flex flex-col gap-1">
-                      {speaker.urls.map((url, urlIndex) => (
-                        <a
-                          key={urlIndex}
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[var(--seafoam)] hover:text-[var(--seafoam)]/80 text-sm underline transition-colors"
-                        >
-                          {url.includes('hopkinsmedicine.org') ? 'Hopkins Medicine Profile' :
-                           url.includes('malonecenter.jhu.edu') ? 'Malone Center Profile' :
-                           url.includes('chem.cuhk.edu.hk') ? 'CUHK Chemistry Profile' :
-                           url.includes('polyu.edu.hk') ? 'PolyU Profile' :
-                           'Profile'}
-                        </a>
-                      ))}
-                    </div>
+                  
+                  <div>
+                    <p className="font-semibold">{speaker.name}</p>
+                    <p className="text-sm opacity-75">{speaker.role}</p>
+                  </div>
+
+                  {expandedIndex === index ? (
+                    <>
+                      <p className="text-sm leading-relaxed mb-6 opacity-90">{speaker.description}</p>
+                      <button 
+                        onClick={() => setExpandedIndex(null)}
+                        className="text-sm text-[var(--seafoam)] hover:text-[var(--seafoam)]/80 mb-6"
+                      >
+                        Show Less
+                      </button>
+                    </>
+                  ) : (
+                    <button 
+                      onClick={() => setExpandedIndex(index)}
+                      className="text-sm text-[var(--seafoam)] hover:text-[var(--seafoam)]/80 mb-6"
+                    >
+                      Learn More
+                    </button>
                   )}
                 </CardContent>
               </Card>
