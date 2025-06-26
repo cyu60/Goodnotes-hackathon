@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Goodnotes HK Hackathon",
-  description: "Goodnotes Hong Kong Hackathon powered by MentorMates",
+  title: "MentorMates Hackathon powered by Goodnotes",
+  description: "MentorMates Hackathon powered by Goodnotes HK 2025",
 };
 
 export default function RootLayout({
