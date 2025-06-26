@@ -86,14 +86,14 @@ export async function POST(request: Request) {
         console.log("Submitting to Google Form with data:", Object.fromEntries(formData));
         console.log("Form data string:", formData.toString());
 
-        const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSf8WYtZ2g07XHd-D8TMUu1fyQjZAOK3kKPVbWfhaDHU5jCSIw/formResponse", {
+        const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSf8WYtZ2g07XHd-D8TMUu1fyQjZAOK3kKPVbWfhaDHU5jCSIw/viewform?usp=preview", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
                 "Accept": "*/*",
                 "Accept-Language": "en-US,en;q=0.9",
                 "Origin": "https://docs.google.com",
-                "Referer": "https://docs.google.com/forms/d/e/1FAIpQLSf8WYtZ2g07XHd-D8TMUu1fyQjZAOK3kKPVbWfhaDHU5jCSIw/viewform",
+                "Referer": "https://docs.google.com/forms/d/e/1FAIpQLSf8WYtZ2g07XHd-D8TMUu1fyQjZAOK3kKPVbWfhaDHU5jCSIw/viewform?usp=preview",
             },
             body: formData.toString(),
             mode: "no-cors",

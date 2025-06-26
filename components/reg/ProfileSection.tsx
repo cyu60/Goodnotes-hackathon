@@ -11,7 +11,6 @@ type Props = {
     discipline: string;
     year: string;
     expectedGradYear: string;
-    how_stats: string;
   };
   onChange: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
 };
@@ -188,24 +187,6 @@ export default function ProfileSection({ formData, onChange }: Props) {
           name="expectedGradYear"
           value={formData.expectedGradYear}
           onChange={onChange}
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
-          required
-        />
-      </div>
-
-      <div>
-        <label className="block text-white mb-1">
-          How did you hear about the MentorMates hackathon?{" "}
-          <span className="text-red-500 ml-1" aria-hidden="true">
-            *
-          </span>
-        </label>
-        <input
-          type="text"
-          name="how_stats"
-          value={formData.how_stats}
-          onChange={onChange}
-          placeholder="e.g. From a friend, social media, or university newsletter."
           className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />
