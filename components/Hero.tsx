@@ -19,7 +19,7 @@ export function Hero() {
             <div className="flex items-center gap-2 text-lg md:text-2xl">
               <span>Sponsored by</span>
               <img
-                src={"../GN LOGO NON WHITE.png"}
+                src={"../R-GN Logo-Non White Background.png"}
                 alt="Goodnotes"
                 className="w-50 h-14 md:w-100 md:h-26"
               />

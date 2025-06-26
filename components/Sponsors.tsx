@@ -46,7 +46,7 @@ export function Sponsors() {
               <div className="flex flex-col items-center text-center">
                 <div className="mb-8 rounded-lg overflow-hidden">
                   <Image
-                    src="/Goodnotes_White Background.png"
+                    src="/R-GN Logo-white BG.png"
                     alt="Goodnotes Logo"
                     width={500}
                     height={250}
