@@ -9,7 +9,7 @@ export function Prizes() {
     >
       {/* Decorative Background Circles */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_rgba(59,130,246,0.35)_0%,_white_100%)] blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_var(--seafoam)_0%,_white_100%)] blur-3xl opacity-30" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
