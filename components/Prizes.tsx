@@ -5,7 +5,7 @@ export function Prizes() {
   return (
     <section
       id="prizes"
-      className="relative py-24 bg-gradient-to-br from-white to-gray-100 overflow-hidden"
+      className="relative py-16 bg-gradient-to-br from-white to-gray-100 overflow-hidden"
     >
       {/* Decorative Background Circles */}
       <div className="absolute inset-0 pointer-events-none">
@@ -46,6 +46,11 @@ export function Prizes() {
           </Card>
 
           {/* Track Winners */}
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our <span className="text-[var(--seafoam)]">Tracks</span>
+            </h2>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
