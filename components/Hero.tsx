@@ -21,7 +21,7 @@ export function Hero() {
               <img
                 src={"../GN LOGO NON WHITE.png"}
                 alt="Goodnotes"
-                className="w-100 h-26 md:w-100 md:h-26"
+                className="w-50 h-14 md:w-100 md:h-26"
               />
             </div>
           </div>

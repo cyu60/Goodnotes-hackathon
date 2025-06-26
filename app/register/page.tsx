@@ -17,24 +17,10 @@ export default function RegisterPage() {
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
-  // Check if mobile on mount and window resize
-  useEffect(() => {
-    setIsClient(true);
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   const [formData, setFormData] = useState({
-    agreeToTerms: "",
-    confirmResume: "",
     firstName: "",
     lastName: "",
+    phone_num: "",
     email: "",
     school: "",
     degree: "",
@@ -46,10 +32,36 @@ export default function RegisterPage() {
     q_goals: "",
     how_stats: "",
     resume: "",
+    team: "",
+    confirmData: "",
   });
 
+  useEffect(() => {
+    setIsClient(true);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    // Load form data from localStorage if available
+    const saved = localStorage.getItem("registerFormData");
+    if (saved) {
+      setFormData(JSON.parse(saved));
+    }
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      localStorage.setItem("registerFormData", JSON.stringify(formData));
+    }
+  }, [formData, isClient]);
+
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -64,6 +76,33 @@ export default function RegisterPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
+
+    // Validate all required fields
+    const requiredFields = [
+      "firstName",
+      "lastName",
+      "phone_num",
+      "email",
+      "school",
+      "degree",
+      "discipline",
+      "year",
+      "expectedGradYear",
+      "how_stats",
+      "confirmData",
+    ];
+
+    const missingFields = requiredFields.filter(
+      (field) => !formData[field as keyof typeof formData]
+    );
+
+    if (missingFields.length > 0) {
+      setError(
+        `Please fill in all required fields: ${missingFields.join(", ")}`
+      );
+      setIsSubmitting(false);
+      return;
+    }
 
     // Log the form data before submission
     console.log("Submitting form data:", formData);
@@ -82,6 +121,7 @@ export default function RegisterPage() {
 
       if (response.ok && data.success) {
         setIsSubmitted(true);
+        localStorage.removeItem("registerFormData");
       } else {
         setError(data.message || "Form submission failed. Please try again.");
       }
@@ -98,13 +138,7 @@ export default function RegisterPage() {
   const renderStep = () => {
     switch (currentStep) {
       case 1:
-        return (
-          <ProfileSection
-            formData={formData}
-            onChange={handleChange}
-            onCheckboxChange={handleCheckboxChange}
-          />
-        );
+        return <ProfileSection formData={formData} onChange={handleChange} />;
       case 2:
         return <QuestionsSection formData={formData} onChange={handleChange} />;
       case 3:
@@ -122,10 +156,9 @@ export default function RegisterPage() {
 
   const resetForm = () => {
     setFormData({
-      agreeToTerms: "",
-      confirmResume: "",
       firstName: "",
       lastName: "",
+      phone_num: "",
       email: "",
       school: "",
       degree: "",
@@ -137,9 +170,12 @@ export default function RegisterPage() {
       q_goals: "",
       how_stats: "",
       resume: "",
+      team: "",
+      confirmData: "",
     });
     setCurrentStep(1);
     setIsSubmitted(false);
+    localStorage.removeItem("registerFormData");
   };
 
   if (isSubmitted) {
@@ -154,8 +190,8 @@ export default function RegisterPage() {
             <img
               src="/success.png"
               alt="Success Icon"
-              width={64}
-              height={64}
+              width={320}
+              height={320}
               className="mx-auto mb-4"
             />
             <Button
