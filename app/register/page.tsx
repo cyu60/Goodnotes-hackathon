@@ -17,19 +17,6 @@ export default function RegisterPage() {
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
-  // Check if mobile on mount and window resize
-  useEffect(() => {
-    setIsClient(true);
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -48,6 +35,30 @@ export default function RegisterPage() {
     team: "",
     confirmData: "",
   });
+
+  useEffect(() => {
+    setIsClient(true);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    // Load form data from localStorage if available
+    const saved = localStorage.getItem("registerFormData");
+    if (saved) {
+      setFormData(JSON.parse(saved));
+    }
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      localStorage.setItem("registerFormData", JSON.stringify(formData));
+    }
+  }, [formData, isClient]);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -110,6 +121,7 @@ export default function RegisterPage() {
 
       if (response.ok && data.success) {
         setIsSubmitted(true);
+        localStorage.removeItem("registerFormData");
       } else {
         setError(data.message || "Form submission failed. Please try again.");
       }
@@ -163,6 +175,7 @@ export default function RegisterPage() {
     });
     setCurrentStep(1);
     setIsSubmitted(false);
+    localStorage.removeItem("registerFormData");
   };
 
   if (isSubmitted) {
