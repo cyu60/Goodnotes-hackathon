@@ -177,8 +177,8 @@ export default function RegisterPage() {
             <img
               src="/success.png"
               alt="Success Icon"
-              width={64}
-              height={64}
+              width={320}
+              height={320}
               className="mx-auto mb-4"
             />
             <Button
