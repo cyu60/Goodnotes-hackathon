@@ -16,10 +16,10 @@ export function Sponsors() {
               <div className="flex flex-col items-center text-center">
                 <div className="mb-8">
                   <Image
-                    src="/goodnotes.png"
+                    src="/Goodnotes_White Background.png"
                     alt="Goodnotes Logo"
-                    width={200}
-                    height={80}
+                    width={500}
+                    height={250}
                     className="mx-auto"
                   />
                 </div>
@@ -46,7 +46,7 @@ export function Sponsors() {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">
-            Thank you to Goodnotes for making this hackathon possible!
+            Thank you for making this hackathon possible!
           </p>
         </div>
       </div>

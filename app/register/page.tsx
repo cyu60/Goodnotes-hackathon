@@ -182,13 +182,11 @@ export default function RegisterPage() {
           <div className="text-center">
             <h1 className="text-2xl sm:text-4xl font-bold text-white mb-2 flex items-center justify-center gap-2">
               <img
-                src="/goodnotes.png"
-                alt="GoodNotes Logo"
-                width={24}
-                height={24}
-                className="w-6 h-6 sm:w-8 sm:h-8"
+                src="../mentormates.png"
+                alt="MentorMates Logo"
+                className="w-15 h-15 md:w-15 md:h-15"
               />
-              <span>GoodNotes Hackathon</span>
+              <span>MentorMates Hackathon</span>
             </h1>
             <p className="text-white/80 text-base sm:text-lg">
               Join us for an exciting weekend of innovation and creativity
