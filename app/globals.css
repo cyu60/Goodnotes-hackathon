@@ -11,6 +11,8 @@
   --apple: #00b577;
   --gnTeal: #45bfdb;
   --white: #ffffff;
+  --blue-dark: #183380;
+  --blue-light: #69BDD8;
 }
 
 @theme inline {
