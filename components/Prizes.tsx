@@ -36,7 +36,7 @@ export function Prizes() {
                 </div>
                 <div className="flex items-center gap-2 text-[var(--seafoam)]">
                   <Briefcase className="w-5 h-5" />
-                  <span className="font-semibold text-gray-800">Internship Fast-Track</span>
+                  <span className="font-semibold text-gray-800">2026 Summer Internship Recruitment Fast-Track</span>
                 </div>
               </div>
               <p className="text-gray-500 text-sm">
@@ -92,7 +92,7 @@ export function Prizes() {
                   <div
                     className={`text-xl font-bold text-${color}-600 mb-2`}
                   >
-                    {emoji} AirPods
+                    {emoji} Sony Headphones
                   </div>
                   <p className="text-gray-600 text-sm px-2">
                     {description}
