@@ -1,90 +1,102 @@
 "use client"
 
 import { Badge } from "@/components/ui/badge";
-import { UserPlus, Users, Zap, Award, Trophy, Mic, Coffee, BookOpen, Lightbulb, Target } from "lucide-react";
+import { UserPlus, Users, Zap, Award, Trophy, Mic, Coffee, BookOpen, Lightbulb, Target, Clock, Heart } from "lucide-react";
 import { useState } from "react";
 
 const day1Events = [
   {
-    title: "Arrival & Registration",
-    description: "Check in, get your name badges and swag, enjoy light breakfast or coffee while networking with fellow participants.",
-    time: "9:00 AM - 9:30 AM",
+    title: "Welcome & Registration",
+    description: "Check in, get your name badges and swag, and connect with fellow participants in a relaxed networking environment.",
+    time: "5:00 PM - 5:30 PM",
     icon: <UserPlus className="w-5 h-5 text-[var(--red)]" />,
   },
   {
-    title: "Opening Keynote",
-    description: '"Reimagining Learning in the AI Era" - A compelling narrative around the role of technology, creativity, and inclusivity in learning.',
-    time: "9:30 AM - 10:00 AM", 
-    icon: <Mic className="w-5 h-5 text-[var(--apple)]" />,
-  },
-  {
-    title: "Fireside Chat: Education Perspectives",
-    description: "How technology is shaping diverse classrooms and disciplines. Featuring educators from special education, music, fashion, and more.",
-    time: "10:00 AM - 11:00 AM",
+    title: "Networking & Refreshments",
+    description: "Enjoy light refreshments while meeting other participants, mentors, and organizers. Perfect opportunity to start forming connections.",
+    time: "5:30 PM - 6:30 PM",
     icon: <Users className="w-5 h-5 text-[var(--gnTeal)]" />,
   },
   {
-    title: "Fireside Chat: Technology Trends",
-    description: "Exploring emerging technologies and research directions with technical mentors from Goodnotes. Learn about LLMs, AI-assisted note-taking, and smart annotations.",
-    time: "11:15 AM - 12:00 PM",
-    icon: <Zap className="w-5 h-5 text-[var(--seafoam)]" />,
+    title: "Welcome Presentation",
+    description: "Learn about the hackathon format, rules, resources, and get excited for the main event tomorrow.",
+    time: "6:30 PM - 7:00 PM",
+    icon: <Mic className="w-5 h-5 text-[var(--apple)]" />,
   },
   {
-    title: "Ideation & Team Formation",
-    description: "Casual table discussions during lunch. Connect education insights and tech sparks into project ideas with guided prompts.",
-    time: "12:00 PM - 1:00 PM",
-    icon: <Lightbulb className="w-5 h-5 text-yellow-700" />,
-  },
-  {
-    title: "Hack Time: Build Your Project",
-    description: "Teams form and start building with mentor support on technical architecture, education use cases, and UX feedback.",
-    time: "1:00 PM - 5:00 PM",
-    icon: <Award className="w-5 h-5 text-[var(--red)]" />,
-  },
-  {
-    title: "Pitching Workshop",
-    description: "Learn how to frame your story: Problem → Insight → Solution. Tips on timing, visuals, and confidence for your presentations.",
-    time: "5:00 PM - 5:30 PM",
-    icon: <Target className="w-5 h-5 text-[var(--apple)]" />,
-  },
-  {
-    title: "Wrap-Up & Optional Showcase",
-    description: "Lightning pitches, feedback wall for peer voting, and networking to close out the day.",
-    time: "5:30 PM onwards",
-    icon: <Trophy className="w-5 h-5 text-[var(--gnTeal)]" />,
+    title: "Continued Networking",
+    description: "More time to connect with participants, discuss ideas, and start thinking about potential collaborations for tomorrow.",
+    time: "7:00 PM - 8:00 PM",
+    icon: <Heart className="w-5 h-5 text-[var(--seafoam)]" />,
   },
 ];
 
 const day2Events = [
   {
-    title: "Morning Check-in & Coffee",
-    description: "Start your hackathon day with coffee, light breakfast, and connecting with your team.",
-    time: "8:30 AM - 9:00 AM",
+    title: "Arrival, Registration, Light Breakfast & Informal Networking",
+    description: "Start your hackathon day with breakfast, coffee, and connecting with your fellow participants.",
+    time: "8:30 AM - 9:15 AM",
     icon: <Coffee className="w-5 h-5 text-[var(--red)]" />,
   },
   {
-    title: "Full Hackathon Session",
+    title: "Keynote Block: Reimagining the Future of Learning",
+    description: "Featuring Professor Paul Kim (World Bank, Former Associate Dean at Stanford Graduate School of Education) and Mr. Quincy Larson (Founder of freeCodeCamp).",
+    time: "9:15 AM - 10:00 AM", 
+    icon: <Mic className="w-5 h-5 text-[var(--apple)]" />,
+  },
+  {
+    title: "Transition/Break",
+    description: "Quick break to refresh and prepare for the next session.",
+    time: "10:00 AM - 10:15 AM",
+    icon: <Clock className="w-5 h-5 text-gray-500" />,
+  },
+  {
+    title: "Fireside Chat: Education Perspectives",
+    description: "Featuring voices from special education, AI in medical education, and fashion/textile education.",
+    time: "10:15 AM - 11:00 AM",
+    icon: <Users className="w-5 h-5 text-[var(--gnTeal)]" />,
+  },
+  {
+    title: "Fireside Chat: Inside Goodnotes – Building the Future of Notes & Learning",
+    description: "Learn from 2–3 senior Goodnotes team members about building innovative learning technologies.",
+    time: "11:00 AM - 11:45 AM",
+    icon: <Zap className="w-5 h-5 text-[var(--seafoam)]" />,
+  },
+  {
+    title: "Transition & Early Lunch Setup, Light Networking",
+    description: "Time to prepare for lunch and continue networking with participants and mentors.",
+    time: "11:45 AM - 12:00 PM",
+    icon: <Clock className="w-5 h-5 text-gray-500" />,
+  },
+  {
+    title: "Lunch + Guided Ideation: Framing Real-World Education Challenges",
+    description: "Enjoy lunch while participating in guided discussions to identify and frame real-world education challenges.",
+    time: "12:00 PM - 1:00 PM",
+    icon: <Lightbulb className="w-5 h-5 text-yellow-700" />,
+  },
+  {
+    title: "Hacking Time – Mentor Rotations & Project Development",
     description: "Intensive building time with continuous mentor support. Develop, iterate, and refine your EdTech solutions.",
-    time: "9:00 AM - 5:30 PM",
-    icon: <Award className="w-5 h-5 text-[var(--apple)]" />,
+    time: "1:00 PM - 5:00 PM",
+    icon: <Award className="w-5 h-5 text-[var(--red)]" />,
   },
   {
-    title: "Project Finalization",
-    description: "Polish your presentations, test your demos, and prepare for the final showcase.",
+    title: "Pitching Workshop – Communicating Ideas with Clarity & Impact",
+    description: "Learn how to present your project effectively with tips on storytelling, timing, and visual communication.",
+    time: "5:00 PM - 5:30 PM",
+    icon: <Target className="w-5 h-5 text-[var(--apple)]" />,
+  },
+  {
+    title: "Team Pitches & Prize Presentation",
+    description: "Teams present their innovative EdTech solutions to judges, followed by prize announcements.",
     time: "5:30 PM - 6:30 PM",
-    icon: <Target className="w-5 h-5 text-[var(--gnTeal)]" />,
+    icon: <Trophy className="w-5 h-5 text-[var(--gnTeal)]" />,
   },
   {
-    title: "Final Presentations",
-    description: "Teams present their innovative EdTech solutions to judges and the community.",
-    time: "6:30 PM - 7:30 PM",
-    icon: <Mic className="w-5 h-5 text-[var(--seafoam)]" />,
-  },
-  {
-    title: "Awards & Closing Ceremony",
-    description: "Celebrate the winners, network with participants, and wrap up an amazing hackathon experience.",
-    time: "7:30 PM - 8:00 PM",
-    icon: <Trophy className="w-5 h-5 text-yellow-700" />,
+    title: "Optional Celebration / Feedback Wall / Informal Mingling",
+    description: "Celebrate the achievements, share feedback, and continue networking in a relaxed atmosphere.",
+    time: "6:30 PM onwards",
+    icon: <Heart className="w-5 h-5 text-yellow-700" />,
   },
 ];
 
@@ -110,7 +122,7 @@ export function Timeline() {
                     : 'text-gray-600 hover:text-gray-800'
                 }`}
               >
-                Day 1
+                Day 1 - Friday, July 11
               </button>
               <button
                 onClick={() => setActiveDay('day2')}
@@ -120,9 +132,18 @@ export function Timeline() {
                     : 'text-gray-600 hover:text-gray-800'
                 }`}
               >
-                Day 2
+                Day 2 - Saturday, July 12
               </button>
             </div>
+          </div>
+
+          <div className="text-center mb-6">
+            <p className="text-gray-600">
+              {activeDay === 'day1' 
+                ? 'Friday, July 11, 2025 | 5:00 PM – 8:00 PM (Welcome & Networking)'
+                : 'Saturday, July 12, 2025 | 8:30 AM – 8:00 PM (Full Hackathon Day)'
+              }
+            </p>
           </div>
 
           <div className="space-y-4">
