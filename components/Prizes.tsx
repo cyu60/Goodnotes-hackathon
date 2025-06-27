@@ -9,14 +9,16 @@ export function Prizes() {
     >
       {/* Decorative Background Circles */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_var(--blue-dark)_0%,_white_100%)] blur-3xl opacity-30" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_var(--blue-light)_0%,_white_100%)] blur-3xl opacity-30" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-extrabold text-center text-gray-900 mb-20 tracking-tight">
-            The <span className="text-[var(--blue-dark)]">Prizes</span>
-          </h2>
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+              The <span className="text-[var(--blue-light)]">Prizes</span>
+            </h2>
+          </div>
 
           {/* Overall Winner */}
           <Card className="relative max-w-3xl mx-auto mb-20 bg-white border border-[var(--blue-dark)] shadow-2xl rounded-3xl p-1 animate-fade-in hover:-translate-y-2 transition-transform duration-300 ease-in-out">
@@ -49,12 +51,6 @@ export function Prizes() {
             </CardContent>
           </Card>
 
-          {/* Track Winners */}
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our <span className="text-[var(--blue-dark)]">Tracks</span>
-            </h2>
-          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {

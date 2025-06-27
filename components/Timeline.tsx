@@ -136,9 +136,11 @@ export function Timeline() {
     <section id="timeline" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
-            Event <span className="text-[var(--blue-dark)]">Timeline</span>
-          </h2>
+          <div className="text-center space-y-4 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+              Event <span className="text-[var(--blue-light)]">Timeline</span>
+            </h2>
+          </div>
 
           <div className="flex justify-center mb-8">
             <div className="bg-gray-100 rounded-full p-1 flex gap-1">
