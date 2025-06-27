@@ -21,6 +21,10 @@ const navItems = [
     {
         name: "Sponsor",
         link: "#sponsor",
+    },
+    {
+        name: "FAQ",
+        link: "#faq",
     }
 ];
 

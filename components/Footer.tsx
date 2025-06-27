@@ -7,6 +7,7 @@ const quickLinks = [
   { name: "Schedule", href: "#timeline" },
   { name: "Prizes", href: "#prizes" },
   { name: "Sponsor", href: "#sponsor" },
+  { name: "FAQ", href: "#faq" },
 ];
 
 const contactInfo = [
