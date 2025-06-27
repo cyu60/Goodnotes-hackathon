@@ -36,7 +36,7 @@ export default function DocsSection({
           value={formData.resume}
           onChange={onChange}
           placeholder="https://your-resume-link.com"
-          className="w-full mt-1 p-2 sm:p-3 text-sm sm:text-base rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-2 sm:p-3 text-sm sm:text-base rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
         />
         <span className="text-xs text-gray-200 mt-1 block">
           Please provide a public link (Google Drive, Dropbox, etc.)
@@ -49,7 +49,7 @@ export default function DocsSection({
           name="confirmData"
           checked={formData.confirmData === "YES"}
           onChange={handleCheckboxChange}
-          className="h-4 w-4 mt-1 sm:mt-0 rounded border-gray-300 focus:ring-2 focus:ring-[var(--gnTeal)] bg-white/80"
+          className="h-4 w-4 mt-1 sm:mt-0 rounded border-gray-300 focus:ring-2 focus:ring-[var(--blue-light)] bg-white/80"
           required
         />
         <label className="block text-white text-sm sm:text-base">

@@ -54,11 +54,11 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         // Custom hackathon colors
-        red: "#d65746",
-        seafoam: "#008089",
-        canary: "#ffe55f",
-        apple: "#00b577",
-        gnTeal: "#45bfdb",
+        "blue-dark": "#183380",
+        "blue-light": "#69BDD8",
+        "gray-light": "#f8f9fa",
+        "gray-medium": "#6c757d",
+        "gray-dark": "#495057",
       },
       borderRadius: {
         lg: "var(--radius)",

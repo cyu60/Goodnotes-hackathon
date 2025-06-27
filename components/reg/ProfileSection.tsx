@@ -34,7 +34,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
             value={formData.firstName}
             onChange={onChange}
             placeholder="e.g. John"
-            className="w-full mt-1 p-2 sm:p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition text-sm sm:text-base"
+            className="w-full mt-1 p-2 sm:p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition text-sm sm:text-base"
             autoComplete="given-name"
             required
           />
@@ -53,7 +53,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
             value={formData.lastName}
             onChange={onChange}
             placeholder="e.g. Doe"
-            className="w-full mt-1 p-2 sm:p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition text-sm sm:text-base"
+            className="w-full mt-1 p-2 sm:p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition text-sm sm:text-base"
             autoComplete="family-name"
             required
           />
@@ -73,7 +73,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
           value={formData.phone_num}
           onChange={onChange}
           placeholder="e.g. +1 555-555-5555"
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />
       </div>
@@ -91,7 +91,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
           value={formData.email}
           onChange={onChange}
           placeholder="e.g. john.doe@gmail.com"
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           autoComplete="email"
           required
         />
@@ -110,7 +110,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
           value={formData.school}
           onChange={onChange}
           placeholder="e.g. Stanford"
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />
       </div>
@@ -126,7 +126,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
           name="degree"
           value={formData.degree}
           onChange={onChange}
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         >
           <option value="">Select a degree</option>
@@ -150,7 +150,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
           value={formData.discipline}
           onChange={onChange}
           placeholder="e.g. Computer Science"
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />
       </div>
@@ -168,7 +168,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
           value={formData.year}
           onChange={onChange}
           placeholder="e.g. 2nd Year"
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />
       </div>
@@ -185,7 +185,7 @@ export default function ProfileSection({ formData, onChange }: Props) {
           name="expectedGradYear"
           value={formData.expectedGradYear}
           onChange={onChange}
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />
       </div>

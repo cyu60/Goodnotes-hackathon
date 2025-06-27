@@ -87,7 +87,7 @@ export function Speakers() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-center">
-              Meet Our <span className="text-[var(--seafoam)]">Speakers</span>
+              Meet Our <span className="text-[var(--blue-dark)]">Speakers</span>
             </h2>
             <p className="text-lg text-gray-600 mt-4 text-center">
               Learn from industry experts and academic leaders
@@ -103,11 +103,11 @@ export function Speakers() {
               {keynoteSpeakers.map((speaker, index) => (
                 <Card
                   key={`keynote-${index}`}
-                  className="bg-gradient-to-br from-[#1a1f36] to-[#121627] text-white border-2 border-[var(--seafoam)]/50 hover:border-[var(--seafoam)] rounded-2xl transition-all"
+                  className="bg-gradient-to-br from-[#1a1f36] to-[#121627] text-white border-2 border-[var(--blue-dark)]/50 hover:border-[var(--blue-dark)] rounded-2xl transition-all"
                 >
                   <CardContent className="p-8">
                     <div className="mb-4">
-                      <span className="inline-block bg-[var(--seafoam)] text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                      <span className="inline-block bg-[var(--blue-dark)] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                         Keynote
                       </span>
                     </div>
@@ -128,7 +128,7 @@ export function Speakers() {
                           href={speaker.urls[0]}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-lg font-bold hover:text-[var(--seafoam)] transition-colors"
+                          className="text-lg font-bold hover:text-[var(--blue-light)] transition-colors"
                         >
                           {speaker.name}
                         </a>
@@ -145,7 +145,7 @@ export function Speakers() {
                         </p>
                         <button
                           onClick={() => setExpandedKeynoteIndex(null)}
-                          className="text-sm text-[var(--seafoam)] hover:text-[var(--seafoam)]/80 mb-6"
+                          className="text-sm text-[var(--blue-light)] hover:text-[var(--blue-light)]/80 mb-6"
                         >
                           Show Less
                         </button>
@@ -153,7 +153,7 @@ export function Speakers() {
                     ) : (
                       <button
                         onClick={() => setExpandedKeynoteIndex(index)}
-                        className="text-sm text-[var(--seafoam)] hover:text-[var(--seafoam)]/80 mb-6"
+                        className="text-sm text-[var(--blue-light)] hover:text-[var(--blue-light)]/80 mb-6"
                       >
                         Learn More
                       </button>
@@ -173,7 +173,7 @@ export function Speakers() {
               {regularSpeakers.map((speaker, index) => (
                 <Card
                   key={`speaker-${index}`}
-                  className="bg-gradient-to-br from-[#1a1f36] to-[#121627] text-white border-2 border-gray-700 hover:border-[var(--seafoam)]/50 rounded-2xl transition-all"
+                  className="bg-gradient-to-br from-[#1a1f36] to-[#121627] text-white border-2 border-gray-700 hover:border-[var(--blue-dark)]/50 rounded-2xl transition-all"
                 >
                   <CardContent className="p-6">
                     <div className="mb-4">
@@ -192,7 +192,7 @@ export function Speakers() {
                           href={speaker.urls[0]}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-semibold hover:text-[var(--seafoam)] transition-colors"
+                          className="font-semibold hover:text-[var(--blue-light)] transition-colors"
                         >
                           {speaker.name}
                         </a>
@@ -209,7 +209,7 @@ export function Speakers() {
                         </p>
                         <button
                           onClick={() => setExpandedSpeakerIndex(null)}
-                          className="text-sm text-[var(--seafoam)] hover:text-[var(--seafoam)]/80"
+                          className="text-sm text-[var(--blue-light)] hover:text-[var(--blue-light)]/80"
                         >
                           Show Less
                         </button>
@@ -217,7 +217,7 @@ export function Speakers() {
                     ) : (
                       <button
                         onClick={() => setExpandedSpeakerIndex(index)}
-                        className="text-sm text-[var(--seafoam)] hover:text-[var(--seafoam)]/80 mt-4"
+                        className="text-sm text-[var(--blue-light)] hover:text-[var(--blue-light)]/80 mt-4"
                       >
                         Learn More
                       </button>

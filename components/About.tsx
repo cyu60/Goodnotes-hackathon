@@ -3,17 +3,23 @@ import { Brain, GraduationCap, TrendingUp } from "lucide-react";
 
 export function About() {
   return (
+    // <section
+    //   id="about"
+    //   className="py-24 bg-gradient-to-bl from-[var(--blue-light)] via-[var(--blue-dark)] to-[var(--white)]"
+    // >
+
     <section
       id="about"
-      className="py-24 bg-gradient-to-bl from-[var(--canary)] via-[var(--gnTeal)] to-[var(--white)]"
+      className="relative min-h-screen flex items-center justify-center bg-[var(--blue-dark)] py-20 md:pt-16"
     >
+
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-20">
           {/* Header Section */}
           <div className="text-center space-y-8">
             <h2 className="text-4xl md:text-6xl font-bold text-white">
               Where Innovation Meets{" "}
-              <span className="text-[var(--canary)]">Mentorship</span>
+              <span className="text-[var(--blue-light)]">Mentorship</span>
             </h2>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
               MentorMates Hackathon brings together curious minds from all
@@ -26,7 +32,7 @@ export function About() {
             <div className="bg-white/25 backdrop-blur-md rounded-3xl p-8 max-w-3xl mx-auto border border-white/30">
               <p className="text-xl md:text-2xl text-white font-bold">
                 🚀{" "}
-                <span className="text-[var(--canary)]">
+                <span className="text-[var(--blue-light)]">
                   No coding experience required
                 </span>{" "}
                 – We provide expert mentors to guide you through every step of
@@ -43,8 +49,8 @@ export function About() {
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
                 <CardHeader className="text-center pb-4 flex-none">
-                  <div className="w-20 h-20 bg-[var(--red)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Brain className="w-10 h-10 text-[var(--red)]" />
+                  <div className="w-20 h-20 bg-[var(--blue-dark)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Brain className="w-10 h-10 text-[var(--blue-dark)]" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-gray-900 mb-2 min-h-[64px] flex items-center justify-center">
                     AI & Special Education
@@ -56,7 +62,7 @@ export function About() {
                 <CardContent className="pt-0 px-6 flex-grow flex flex-col justify-start">
                   <ul className="text-gray-700 space-y-4 text-left">
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--red)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--blue-dark)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">
@@ -64,7 +70,7 @@ export function About() {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--red)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--blue-dark)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">
@@ -72,7 +78,7 @@ export function About() {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--red)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--blue-dark)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">
@@ -85,8 +91,8 @@ export function About() {
 
               <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
                 <CardHeader className="text-center pb-4 flex-none">
-                  <div className="w-20 h-20 bg-[var(--apple)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <GraduationCap className="w-10 h-10 text-[var(--apple)]" />
+                  <div className="w-20 h-20 bg-[var(--blue-light)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <GraduationCap className="w-10 h-10 text-[var(--blue-light)]" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-gray-900 mb-2 min-h-[64px] flex items-center justify-center">
                     AI in Traditional Education
@@ -98,7 +104,7 @@ export function About() {
                 <CardContent className="pt-0 px-6 flex-grow flex flex-col justify-start">
                   <ul className="text-gray-700 space-y-4 text-left">
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--apple)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--blue-light)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">
@@ -106,7 +112,7 @@ export function About() {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--apple)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--blue-light)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">
@@ -114,7 +120,7 @@ export function About() {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--apple)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--blue-light)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">
@@ -127,8 +133,8 @@ export function About() {
 
               <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
                 <CardHeader className="text-center pb-4 flex-none">
-                  <div className="w-20 h-20 bg-[var(--gnTeal)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <TrendingUp className="w-10 h-10 text-[var(--gnTeal)]" />
+                  <div className="w-20 h-20 bg-[var(--gray-medium)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <TrendingUp className="w-10 h-10 text-[var(--gray-medium)]" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-gray-900 mb-2 min-h-[64px] flex items-center justify-center">
                     AI & Workforce Learning
@@ -140,7 +146,7 @@ export function About() {
                 <CardContent className="pt-0 px-6 flex-grow flex flex-col justify-start">
                   <ul className="text-gray-700 space-y-4 text-left">
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--gnTeal)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--gray-medium)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">
@@ -148,7 +154,7 @@ export function About() {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--gnTeal)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--gray-medium)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">
@@ -156,7 +162,7 @@ export function About() {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--gnTeal)] font-bold text-sm mt-1 flex-none">
+                      <span className="text-[var(--gray-medium)] font-bold text-sm mt-1 flex-none">
                         •
                       </span>
                       <span className="leading-relaxed">

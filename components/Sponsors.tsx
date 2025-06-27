@@ -30,18 +30,15 @@ const WrigglyLine = ({
 
 export function Sponsors() {
   return (
-    <section
-      id="sponsor"
-      className="relative overflow-hidden py-20"
-    >
+    <section id="sponsor" className="relative overflow-hidden py-20">
       {/* ───── Foreground content ───── */}
       <div className="container mx-auto px-4 relative">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
-          About the <span className="text-[var(--seafoam)]">Sponsor</span>
+          About the <span className="text-[var(--blue-dark)]">Sponsor</span>
         </h2>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="border-none shadow-[0_-25px_50px_-12px_var(--seafoam),0_25px_50px_-12px_var(--seafoam)] relative z-10 bg-white">
+          <Card className="border-none shadow-[0_-25px_50px_-12px_var(--blue-dark),0_25px_50px_-12px_var(--blue-dark)] relative z-10 bg-white">
             <CardContent className="p-12">
               <div className="flex flex-col items-center text-center">
                 <div className="mb-8 rounded-lg overflow-hidden">
@@ -59,8 +56,9 @@ export function Sponsors() {
                     Goodnotes is the leading AI digital paper used by millions
                     of people worldwide. Launched in 2011, Goodnotes started as
                     an improvement to physical paper notes — introducing the
-                    ability to take handwritten digital notes, search handwritten
-                    text, and organize everything into a digital library.
+                    ability to take handwritten digital notes, search
+                    handwritten text, and organize everything into a digital
+                    library.
                   </p>
 
                   <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
@@ -73,28 +71,25 @@ export function Sponsors() {
               </div>
             </CardContent>
           </Card>
-          
-          
         </div>
 
-         {/* Background line image */}
-         <Image
-            src="/line.png"
-            alt="Background line"
-            width={1100}
-            height={1100}
-            className="absolute -left-10 inset-0 w-auto h-auto object-cover -z-10 "
-          />  
+        {/* Background line image */}
+        <Image
+          src="/line.png"
+          alt="Background line"
+          width={1100}
+          height={1100}
+          className="absolute -left-10 inset-0 w-auto h-auto object-cover -z-10 "
+        />
 
         {/* Background wriggly line */}
-        <WrigglyLine 
+        <WrigglyLine
           className="absolute top-180 inset-0 w-auto h-auto -z-10 left-10 -rotate-15"
-          color="var(--canary)"
+          color="var(--blue-light)"
           strokeWidth={40}
         />
 
         <div className="text-center mt-12">
-
           <p className="text-gray-600 px-4 py-2 rounded-lg">
             Thank you to Goodnotes for making this hackathon possible!
           </p>
