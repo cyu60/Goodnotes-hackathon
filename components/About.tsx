@@ -41,95 +41,127 @@ export function About() {
               Three Innovation Tracks
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="text-center pb-4">
+              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                <CardHeader className="text-center pb-4 flex-none">
                   <div className="w-20 h-20 bg-[var(--red)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Brain className="w-10 h-10 text-[var(--red)]" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2 min-h-[64px] flex items-center justify-center">
                     AI & Special Education
                   </CardTitle>
-                  <p className="text-base text-gray-600 font-medium">
+                  <p className="text-base text-gray-600 font-medium min-h-[48px] flex items-center justify-center">
                     Supporting Students with Learning Differences
                   </p>
                 </CardHeader>
-                <CardContent className="pt-0">
-                  <ul className="text-gray-700 space-y-3">
+                <CardContent className="pt-0 px-6 flex-grow flex flex-col justify-start">
+                  <ul className="text-gray-700 space-y-4 text-left">
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--red)] font-bold">•</span>
-                      <span>
+                      <span className="text-[var(--red)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
                         Develop AI-powered tools for inclusive learning
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--red)] font-bold">•</span>
-                      <span>
+                      <span className="text-[var(--red)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
                         Create assistive technologies for diverse needs
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--red)] font-bold">•</span>
-                      <span>Design personalized education experiences</span>
+                      <span className="text-[var(--red)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
+                        Design personalized education experiences
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="text-center pb-4">
+              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                <CardHeader className="text-center pb-4 flex-none">
                   <div className="w-20 h-20 bg-[var(--apple)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <GraduationCap className="w-10 h-10 text-[var(--apple)]" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2 min-h-[64px] flex items-center justify-center">
                     AI in Traditional Education
                   </CardTitle>
-                  <p className="text-base text-gray-600 font-medium">
+                  <p className="text-base text-gray-600 font-medium min-h-[48px] flex items-center justify-center">
                     Transforming How We Learn
                   </p>
                 </CardHeader>
-                <CardContent className="pt-0">
-                  <ul className="text-gray-700 space-y-3">
+                <CardContent className="pt-0 px-6 flex-grow flex flex-col justify-start">
+                  <ul className="text-gray-700 space-y-4 text-left">
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--apple)] font-bold">•</span>
-                      <span>Reimagine classroom experiences with AI</span>
+                      <span className="text-[var(--apple)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
+                        Reimagine classroom experiences with AI
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--apple)] font-bold">•</span>
-                      <span>Build intelligent tutoring systems</span>
+                      <span className="text-[var(--apple)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
+                        Build intelligent tutoring systems
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--apple)] font-bold">•</span>
-                      <span>Create adaptive learning platforms</span>
+                      <span className="text-[var(--apple)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
+                        Create adaptive learning platforms
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardHeader className="text-center pb-4">
+              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                <CardHeader className="text-center pb-4 flex-none">
                   <div className="w-20 h-20 bg-[var(--gnTeal)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <TrendingUp className="w-10 h-10 text-[var(--gnTeal)]" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2 min-h-[64px] flex items-center justify-center">
                     AI & Workforce Learning
                   </CardTitle>
-                  <p className="text-base text-gray-600 font-medium">
+                  <p className="text-base text-gray-600 font-medium min-h-[48px] flex items-center justify-center">
                     Preparing for Tomorrow's Jobs
                   </p>
                 </CardHeader>
-                <CardContent className="pt-0">
-                  <ul className="text-gray-700 space-y-3">
+                <CardContent className="pt-0 px-6 flex-grow flex flex-col justify-start">
+                  <ul className="text-gray-700 space-y-4 text-left">
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--gnTeal)] font-bold">•</span>
-                      <span>Design AI-driven professional development</span>
+                      <span className="text-[var(--gnTeal)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
+                        Design AI-driven professional development
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--gnTeal)] font-bold">•</span>
-                      <span>Create upskilling and reskilling solutions</span>
+                      <span className="text-[var(--gnTeal)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
+                        Create upskilling and reskilling solutions
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[var(--gnTeal)] font-bold">•</span>
-                      <span>Build career transition support systems</span>
+                      <span className="text-[var(--gnTeal)] font-bold text-sm mt-1 flex-none">
+                        •
+                      </span>
+                      <span className="leading-relaxed">
+                        Build career transition support systems
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
