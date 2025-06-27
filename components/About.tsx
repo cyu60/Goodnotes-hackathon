@@ -139,42 +139,42 @@ export function About() {
 
           {/* What Makes This Different */}
           <div className="space-y-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-white text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 text-center">
               What Makes This Different?
             </h3>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 border border-white/40">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+              <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-lg">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-3">
                   🎓 Learn While You Build
                 </h4>
-                <p className="text-white/95 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed">
                   Our mentors will teach you everything you need to know, from
                   basic AI concepts to design thinking.
                 </p>
               </div>
-              <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 border border-white/40">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+              <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-lg">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-3">
                   🤝 Collaboration First
                 </h4>
-                <p className="text-white/95 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed">
                   Work with teammates from different backgrounds to create
                   well-rounded solutions.
                 </p>
               </div>
-              <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 border border-white/40">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+              <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-lg">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-3">
                   🌟 Real Impact
                 </h4>
-                <p className="text-white/95 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed">
                   Address actual challenges in education that can make a
                   difference in students' lives.
                 </p>
               </div>
-              <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 border border-white/40">
-                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+              <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-lg">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-3">
                   🚀 Career Opportunities
                 </h4>
-                <p className="text-white/95 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed">
                   Network with industry leaders and potentially fast-track your
                   way to amazing internships.
                 </p>
