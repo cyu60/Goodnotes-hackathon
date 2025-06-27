@@ -11,10 +11,6 @@ const navItems = [
         link: "#timeline",
     },
     {
-        name: "Speakers",
-        link: "#speakers",
-    },
-    {
         name: "Prizes",
         link: "#prizes",
     },
