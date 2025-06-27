@@ -1,79 +1,185 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lightbulb, Code2, Users } from "lucide-react";
+import { Brain, GraduationCap, TrendingUp } from "lucide-react";
 
 export function About() {
   return (
     <section
       id="about"
-      className="py-20 bg-gradient-to-bl from-[var(--canary)] via-[var(--gnTeal)] to-[var(--white)]"
+      className="py-24 bg-gradient-to-bl from-[var(--canary)] via-[var(--gnTeal)] to-[var(--white)]"
     >
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Innovation Meets{" "}
-              <span className="text-[var(--canary)]">Collaboration</span>
+        <div className="max-w-6xl mx-auto space-y-20">
+          {/* Header Section */}
+          <div className="text-center space-y-8">
+            <h2 className="text-4xl md:text-6xl font-bold text-white">
+              Where Innovation Meets{" "}
+              <span className="text-[var(--canary)]">Mentorship</span>
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              This hackathon is organized by MentorMates to bring together
-              passionate developers, designers, and entrepreneurs from across
-              the region to tackle real-world challenges. We believe in the
-              power of diverse minds working together to create solutions that
-              matter.
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+              MentorMates Hackathon brings together curious minds from all
+              backgrounds to explore how AI can transform education. Whether
+              you're a student studying CS, psychology, business, design,
+              education, or a young professional working in any field – your
+              unique perspective is exactly what we need to create meaningful
+              solutions for tomorrow's learners.
             </p>
+            <div className="bg-white/25 backdrop-blur-md rounded-3xl p-8 max-w-3xl mx-auto border border-white/30">
+              <p className="text-xl md:text-2xl text-white font-bold">
+                🚀{" "}
+                <span className="text-[var(--canary)]">
+                  No coding experience required
+                </span>{" "}
+                – We provide expert mentors to guide you through every step of
+                the journey!
+              </p>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-[var(--seafoam)] rounded-3xl bg-[var(--white)]">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-[var(--red)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-8 h-8 text-[var(--red)]" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900">
-                  Innovation
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center">
-                  Push boundaries and explore cutting-edge technologies to solve
-                  tomorrow's problems today.
-                </p>
-              </CardContent>
-            </Card>
+          {/* Three Innovation Tracks */}
+          <div className="space-y-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-white text-center">
+              Three Innovation Tracks
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-20 h-20 bg-[var(--red)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Brain className="w-10 h-10 text-[var(--red)]" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                    AI & Special Education
+                  </CardTitle>
+                  <p className="text-base text-gray-600 font-medium">
+                    Supporting Students with Learning Differences
+                  </p>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <ul className="text-gray-700 space-y-3">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--red)] font-bold">•</span>
+                      <span>
+                        Develop AI-powered tools for inclusive learning
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--red)] font-bold">•</span>
+                      <span>
+                        Create assistive technologies for diverse needs
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--red)] font-bold">•</span>
+                      <span>Design personalized education experiences</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
 
-            <Card className="border-[var(--seafoam)] rounded-3xl bg-[var(--white)]">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-[var(--apple)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Code2 className="w-8 h-8 text-[var(--apple)]" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900">
-                  Coding Excellence
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center">
-                  Write clean, efficient code that makes a difference. Learn
-                  from peers and industry experts.
-                </p>
-              </CardContent>
-            </Card>
+              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-20 h-20 bg-[var(--apple)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <GraduationCap className="w-10 h-10 text-[var(--apple)]" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                    AI in Traditional Education
+                  </CardTitle>
+                  <p className="text-base text-gray-600 font-medium">
+                    Transforming How We Learn
+                  </p>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <ul className="text-gray-700 space-y-3">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--apple)] font-bold">•</span>
+                      <span>Reimagine classroom experiences with AI</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--apple)] font-bold">•</span>
+                      <span>Build intelligent tutoring systems</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--apple)] font-bold">•</span>
+                      <span>Create adaptive learning platforms</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
 
-            <Card className="border-[var(--seafoam)] rounded-3xl bg-[var(--white)]">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-[var(--gnTeal)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-[var(--gnTeal)]" />
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900">
-                  Teamwork
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center">
-                  Collaborate with talented individuals from diverse backgrounds
-                  and skill sets.
+              <Card className="border-none rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-20 h-20 bg-[var(--gnTeal)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <TrendingUp className="w-10 h-10 text-[var(--gnTeal)]" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                    AI & Workforce Learning
+                  </CardTitle>
+                  <p className="text-base text-gray-600 font-medium">
+                    Preparing for Tomorrow's Jobs
+                  </p>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <ul className="text-gray-700 space-y-3">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--gnTeal)] font-bold">•</span>
+                      <span>Design AI-driven professional development</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--gnTeal)] font-bold">•</span>
+                      <span>Create upskilling and reskilling solutions</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[var(--gnTeal)] font-bold">•</span>
+                      <span>Build career transition support systems</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* What Makes This Different */}
+          <div className="space-y-8">
+            <h3 className="text-3xl md:text-4xl font-bold text-white text-center">
+              What Makes This Different?
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 border border-white/40">
+                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                  🎓 Learn While You Build
+                </h4>
+                <p className="text-white/95 text-lg leading-relaxed">
+                  Our mentors will teach you everything you need to know, from
+                  basic AI concepts to design thinking.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+              <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 border border-white/40">
+                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                  🤝 Collaboration First
+                </h4>
+                <p className="text-white/95 text-lg leading-relaxed">
+                  Work with teammates from different backgrounds to create
+                  well-rounded solutions.
+                </p>
+              </div>
+              <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 border border-white/40">
+                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                  🌟 Real Impact
+                </h4>
+                <p className="text-white/95 text-lg leading-relaxed">
+                  Address actual challenges in education that can make a
+                  difference in students' lives.
+                </p>
+              </div>
+              <div className="bg-white/30 backdrop-blur-md rounded-3xl p-8 border border-white/40">
+                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                  🚀 Career Opportunities
+                </h4>
+                <p className="text-white/95 text-lg leading-relaxed">
+                  Network with industry leaders and potentially fast-track your
+                  way to amazing internships.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
