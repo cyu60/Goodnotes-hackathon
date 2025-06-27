@@ -163,13 +163,11 @@ export default function ProfileSection({ formData, onChange }: Props) {
           </span>
         </label>
         <input
-          type="number"
+          type="text"
           name="year"
           value={formData.year}
           onChange={onChange}
           placeholder="e.g. 2nd Year"
-          min={1}
-          max={5}
           className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />

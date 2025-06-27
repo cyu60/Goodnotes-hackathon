@@ -152,6 +152,7 @@ export async function POST(request: Request) {
             const responseText = await response.text();
             console.log("Google Form response body length:", responseText.length);
             console.log("Google Form response body (first 500 chars):", responseText.substring(0, 500));
+            console.log("Google Form response body:", responseText);
             
             // Check if response contains success indicators
             if (responseText.includes("Thank you") || responseText.includes("success") || responseText.includes("submitted")) {

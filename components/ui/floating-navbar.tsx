@@ -73,7 +73,7 @@ export const FloatingNav = ({
           </a>
         ))}
         <a
-          href="/register"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSf8WYtZ2g07XHd-D8TMUu1fyQjZAOK3kKPVbWfhaDHU5jCSIw/viewform"
           className="border text-xs sm:text-sm font-medium relative border-white text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full hover:bg-white hover:text-[var(--gnTeal)]"
         >
           <span>Register</span>

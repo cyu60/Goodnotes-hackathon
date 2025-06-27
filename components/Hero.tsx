@@ -34,7 +34,7 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-[var(--red)] hover:bg-[var(--canary)]/90 hover:text-[var(--red)] text-white px-8 py-3 text-lg font-semibold rounded-full"
-              onClick={() => (window.location.href = "/register")}
+              onClick={() => (window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSf8WYtZ2g07XHd-D8TMUu1fyQjZAOK3kKPVbWfhaDHU5jCSIw/viewform")}
             >
               Register Now
             </Button>
