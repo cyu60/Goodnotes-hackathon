@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MentorMates Hackathon powered by Goodnotes",
+  title: "MentorMates Hackathon sponsored by Goodnotes",
   description: "MentorMates Hackathon sponsored by Goodnotes HK 2025",
 };
 
