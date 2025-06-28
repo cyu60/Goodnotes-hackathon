@@ -50,30 +50,6 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Benefits Cards
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white/15 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="font-bold text-xl text-[var(--blue-light)] mb-2">
-                ✅ Completely Free
-              </div>
-              <div className="text-[var(--blue-dark)]">No cost, no barriers</div>
-            </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="font-bold text-xl text-[var(--blue-light)] mb-2">
-                ✅ Students & Professionals Welcome
-              </div>
-              <div className="text-[var(--blue-dark)]">
-                Your unique perspective matters
-              </div>
-            </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="font-bold text-xl text-[var(--blue-light)] mb-2">
-                ✅ Expert Mentorship
-              </div>
-              <div className="text-[var(--blue-dark)]">Learn as you build</div>
-            </div>
-          </div> */}
-
           {/* Event Details */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 max-w-3xl mx-auto border border-[var(--blue-dark)]/20">
             <div className="text-xl font-medium text-[var(--blue-dark)]">
