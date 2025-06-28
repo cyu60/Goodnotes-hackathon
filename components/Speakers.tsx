@@ -61,11 +61,11 @@ const speakers = [
     ],
   },
   {
-    name: "Joe Liu",
-    role: "Special Education School Principal",
+    name: "Mr. Siu Chun Joe Lui",
+    role: "Vice Principal, HKSYC&IA Chan Nam Chong Memorial School",
     description:
-      "A dedicated principal and special education teacher with decades of experience transforming learning experiences for students with diverse needs. Joe Liu brings invaluable insights into inclusive education technology, assistive learning tools, and innovative approaches to making education accessible for all learners. His extensive field experience provides practical perspectives on implementing technology solutions in special education settings.",
-    image: "/mentormates.png",
+      "Mr. Lui is the vice principal at a special school in Hong Kong for students with intellectual disabilities and autism. With a background in music therapy and inclusive education, he leads the school's autism support programs and curriculum development. He is passionate about integrating technology and the arts to enhance learning experiences for students on the autism spectrum and to promote creativity, communication, and inclusion in the classroom.",
+    image: "/joeliu.jpg",
     urls: [],
   },
 ];
