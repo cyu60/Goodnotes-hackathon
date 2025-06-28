@@ -52,7 +52,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--seafoam)] text-gray-300">
+    <footer className="bg-[var(--blue-dark)] text-gray-300">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
@@ -78,7 +78,7 @@ export function Footer() {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="hover:text-[var(--gnTeal)] transition-colors"
+                    className="hover:text-[var(--blue-light)] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -95,11 +95,11 @@ export function Footer() {
             <ul className="space-y-2">
               {contactInfo.map((item, index) => (
                 <li key={index} className="flex items-center gap-2">
-                  <item.icon className="w-4 h-4 text-[var(--gnTeal)]" />
+                  <item.icon className="w-4 h-4 text-[var(--blue-light)]" />
                   {item.isLink ? (
                     <a
                       href={item.href}
-                      className="hover:text-[var(--gnTeal)] transition-colors"
+                      className="hover:text-[var(--blue-light)] transition-colors"
                     >
                       {item.content}
                     </a>
@@ -119,7 +119,7 @@ export function Footer() {
               <a
                 key={index}
                 href={social.href}
-                className="hover:text-[var(--gnTeal)] transition-colors"
+                className="hover:text-[var(--blue-light)] transition-colors"
               >
                 <social.icon className="w-6 h-6" />
               </a>

@@ -180,7 +180,7 @@ export default function RegisterPage() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[var(--seafoam)] via-[var(--gnTeal)] to-[var(--canary)] p-8 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-[var(--blue-dark)] via-[var(--blue-light)] to-[var(--gray-light)] p-8 flex items-center justify-center">
         <div className="max-w-2xl w-full">
           <div className="bg-white/5 backdrop-blur-xl rounded-4xl p-8 shadow-5xl text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Thank You!</h2>
@@ -207,7 +207,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[var(--seafoam)] via-[var(--gnTeal)] to-[var(--canary)] p-4 sm:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[var(--blue-dark)] via-[var(--blue-light)] to-[var(--gray-light)] p-4 sm:p-8">
       <div className="max-w-2xl mx-auto">
         <div className="mb-6 sm:mb-8">
           <div className="mb-4">
@@ -260,7 +260,7 @@ export default function RegisterPage() {
               <Button
                 type="button"
                 onClick={() => setCurrentStep((s) => s + 1)}
-                className="ml-auto bg-[var(--gnTeal)] hover:bg-[var(--gnTeal)]/90 text-white px-8 py-2 text-lg w-full sm:w-auto"
+                className="ml-auto bg-[var(--blue-light)] hover:bg-[var(--blue-light)]/90 text-white px-8 py-2 text-lg w-full sm:w-auto"
               >
                 Next
               </Button>
@@ -268,7 +268,7 @@ export default function RegisterPage() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="ml-auto bg-[var(--red)] hover:bg-[var(--red)]/90 text-white px-8 py-2 text-lg w-full sm:w-auto"
+                className="ml-auto bg-[var(--blue-dark)] hover:bg-[var(--blue-dark)]/90 text-white px-8 py-2 text-lg w-full sm:w-auto"
               >
                 {isSubmitting ? "Submitting..." : "Submit Registration"}
               </Button>

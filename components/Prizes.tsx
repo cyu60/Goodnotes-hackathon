@@ -9,34 +9,40 @@ export function Prizes() {
     >
       {/* Decorative Background Circles */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_var(--seafoam)_0%,_white_100%)] blur-3xl opacity-30" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_var(--blue-light)_0%,_white_100%)] blur-3xl opacity-30" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-extrabold text-center text-gray-900 mb-20 tracking-tight">
-            The <span className="text-[var(--seafoam)]">Prizes</span>
-          </h2>
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+              The <span className="text-[var(--blue-light)]">Prizes</span>
+            </h2>
+          </div>
 
           {/* Overall Winner */}
-          <Card className="relative max-w-3xl mx-auto mb-20 bg-white border border-[var(--seafoam)] shadow-2xl rounded-3xl p-1 animate-fade-in hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-[var(--seafoam)] text-white rounded-full flex items-center justify-center shadow-md">
+          <Card className="relative max-w-3xl mx-auto mb-20 bg-white border border-[var(--blue-dark)] shadow-2xl rounded-3xl p-1 animate-fade-in hover:-translate-y-2 transition-transform duration-300 ease-in-out">
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-[var(--blue-dark)] text-white rounded-full flex items-center justify-center shadow-md">
               <Trophy className="w-6 h-6" />
             </div>
             <CardHeader className="text-center mt-6">
-              <CardTitle className="text-3xl font-bold text-[var(--seafoam)]">
+              <CardTitle className="text-3xl font-bold text-[var(--blue-dark)]">
                 Overall Winner
               </CardTitle>
             </CardHeader>
             <CardContent className="text-center space-y-5 pb-6">
               <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                <div className="flex items-center gap-2 text-[var(--seafoam)]">
+                <div className="flex items-center gap-2 text-[var(--blue-dark)]">
                   <Tablet className="w-5 h-5" />
-                  <span className="font-semibold text-gray-800">iPad & Apple Pencil</span>
+                  <span className="font-semibold text-gray-800">
+                    iPad & Apple Pencil
+                  </span>
                 </div>
-                <div className="flex items-center gap-2 text-[var(--seafoam)]">
+                <div className="flex items-center gap-2 text-[var(--blue-dark)]">
                   <Briefcase className="w-5 h-5" />
-                  <span className="font-semibold text-gray-800">2026 Summer Internship Recruitment Fast-Track</span>
+                  <span className="font-semibold text-gray-800">
+                    2026 Summer Internship Recruitment Fast-Track
+                  </span>
                 </div>
               </div>
               <p className="text-gray-500 text-sm">
@@ -45,12 +51,6 @@ export function Prizes() {
             </CardContent>
           </Card>
 
-          {/* Track Winners */}
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our <span className="text-[var(--seafoam)]">Tracks</span>
-            </h2>
-          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -89,14 +89,10 @@ export function Prizes() {
                   </div>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <div
-                    className={`text-xl font-bold text-${color}-600 mb-2`}
-                  >
+                  <div className={`text-xl font-bold text-${color}-600 mb-2`}>
                     {emoji} Sony Headphones
                   </div>
-                  <p className="text-gray-600 text-sm px-2">
-                    {description}
-                  </p>
+                  <p className="text-gray-600 text-sm px-2">{description}</p>
                 </CardContent>
               </Card>
             ))}

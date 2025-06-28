@@ -26,7 +26,7 @@ export default function QuestionsSection({ formData, onChange }: Props) {
           value={formData.q_experience}
           onChange={onChange}
           placeholder="No experience? No problem! Just share anything you've explored or are curious about."
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           rows={4}
         />
       </div>
@@ -41,7 +41,7 @@ export default function QuestionsSection({ formData, onChange }: Props) {
           value={formData.q_background}
           onChange={onChange}
           placeholder="Share your background in education and technology."
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           rows={4}
         />
       </div>
@@ -56,7 +56,7 @@ export default function QuestionsSection({ formData, onChange }: Props) {
           value={formData.q_goals}
           onChange={onChange}
           placeholder="Share your goals for the hackathon."
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           rows={4}
         />
       </div>
@@ -74,7 +74,7 @@ export default function QuestionsSection({ formData, onChange }: Props) {
           value={formData.how_stats}
           onChange={onChange}
           placeholder="e.g. From a friend, social media, or university newsletter."
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           required
         />
       </div>
@@ -88,7 +88,7 @@ export default function QuestionsSection({ formData, onChange }: Props) {
           value={formData.team}
           onChange={onChange}
           placeholder="If yes, please list your teammates below. (Note: Each teammate still needs to apply separately.) If not, no worries — we'll have networking and team formation activities on Friday evening to help you find teammates!"
-          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--gnTeal)] focus:ring-2 focus:ring-[var(--gnTeal)] text-gray-900 placeholder-gray-400 shadow-sm transition"
+          className="w-full mt-1 p-3 rounded-lg bg-white/80 border border-gray-300 focus:border-[var(--blue-light)] focus:ring-2 focus:ring-[var(--blue-light)] text-gray-900 placeholder-gray-400 shadow-sm transition"
           rows={4}
         />
         <span className="text-xs text-gray-200 mt-1 block">
