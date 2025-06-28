@@ -19,6 +19,14 @@ export function FAQ() {
       color: "var(--blue-dark)",
     },
     {
+      question:
+        "Can I participate if I don't know how to code or don't have a computer science background?",
+      answer:
+        "Absolutely! Our event is designed to be super accessible to everyone—no matter your technical background. Whether you're a designer, storyteller, educator, student, or just curious, we welcome all creative minds. You'll find opportunities to collaborate, learn, and contribute meaningfully, even if you've never written a line of code.",
+      icon: HelpCircle,
+      color: "var(--blue-light)",
+    },
+    {
       question: "What should I bring to the event?",
       answer:
         "Bring your laptop, chargers, and your creativity! We'll provide food, drinks, and a collaborative environment for you to build amazing projects.",
@@ -63,7 +71,10 @@ export function FAQ() {
               const IconComponent = faq.icon;
               const isOpen = openIndex === idx;
               return (
-                <div key={idx} className="border-b border-[var(--blue-light)]/30 last:border-b-0">
+                <div
+                  key={idx}
+                  className="border-b border-[var(--blue-light)]/30 last:border-b-0"
+                >
                   <button
                     className="w-full flex items-center gap-6 px-6 py-6 text-left focus:outline-none transition-colors hover:bg-[var(--blue-light)]/10"
                     onClick={() => handleToggle(idx)}
@@ -111,7 +122,8 @@ export function FAQ() {
               Still have questions?
             </h3>
             <p className="text-lg text-gray-600 mb-2">
-              Remember: <span className="font-bold">Everyone can join this event!</span>{" "}
+              Remember:{" "}
+              <span className="font-bold">Everyone can join this event!</span>{" "}
               Don&apos;t hesitate to reach out if you need more information.
             </p>
             <p className="text-gray-600">
