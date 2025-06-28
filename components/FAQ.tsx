@@ -51,7 +51,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="py-20 bg-gradient-to-br from-[var(--white)] via-[var(--blue-dark)]/10 to-[var(--blue-light)]/10"
+      className="relative py-20 bg-gradient-to-br from-[var(--white)] via-[var(--blue-dark)]/10 to-[var(--blue-light)]/10"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -130,12 +130,49 @@ export function FAQ() {
               Contact us at{" "}
               <a
                 href="mailto:mentormatesofficial@gmail.com"
-                className="text-white bg-[var(--blue-dark)] p-2 rounded-4xl font-semibold hover:underline"
+                className="text-white bg-[var(--blue-light)] p-2 rounded-4xl font-semibold hover:underline"
               >
                 mentormatesofficial@gmail.com
               </a>{" "}
               or reach out to our socials for any additional questions.
             </p>
+          </div>
+          <svg
+            className="w-full my-8"
+            height="48"
+            viewBox="0 0 1440 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 12C120 12 120 20 240 20C360 20 360 4 480 4C600 4 600 16 720 16C840 16 840 8 960 8C1080 8 1080 18 1200 18C1320 18 1320 6 1440 6"
+              stroke="var(--blue-dark)"
+              strokeWidth="4"
+              strokeLinecap="round"
+              fill="none"
+            />
+            <path
+              d="M0 36C120 36 120 44 240 44C360 44 360 28 480 28C600 28 600 40 720 40C840 40 840 32 960 32C1080 32 1080 42 1200 42C1320 42 1320 30 1440 30"
+              stroke="var(--blue-light)"
+              strokeWidth="4"
+              strokeLinecap="round"
+              fill="none"
+            />
+          </svg>
+
+          <div className="mt-2 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-[var(--blue-dark)] mb-6">
+              Ready to Join the Hackathon?
+            </h3>
+            <p className="text-xl text-gray-600 mb-8">
+              Don't miss out on this amazing opportunity to innovate, learn, and grow!
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf8WYtZ2g07XHd-D8TMUu1fyQjZAOK3kKPVbWfhaDHU5jCSIw/viewform"
+              className="inline-block bg-[var(--blue-light)] text-white text-xl font-bold px-12 py-4 rounded-full hover:bg-[var(--gray-dark)] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              Register Now
+            </a>
           </div>
         </div>
       </div>
