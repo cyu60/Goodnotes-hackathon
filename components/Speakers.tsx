@@ -42,14 +42,14 @@ const speakers = [
       "https://malonecenter.jhu.edu/people/tin-yan-alvin-liu/",
     ],
   },
-  {
-    name: "Dr. Donald Chan Ka Long",
-    role: "Lecturer & Deputy Director, Natural Sciences Programme, CUHK",
-    description:
-      "An accomplished chemist and educator at The Chinese University of Hong Kong, specializing in environmental applications of advanced materials and analytical chemistry. Dr. Chan combines cutting-edge research in environmental science with innovative teaching methodologies, contributing to sustainable chemistry solutions and materials characterization.",
-    image: "/donald.webp",
-    urls: ["https://chem.cuhk.edu.hk/people/academic-staff/ckl/"],
-  },
+  // {
+  //   name: "Dr. Donald Chan Ka Long",
+  //   role: "Lecturer & Deputy Director, Natural Sciences Programme, CUHK",
+  //   description:
+  //     "An accomplished chemist and educator at The Chinese University of Hong Kong, specializing in environmental applications of advanced materials and analytical chemistry. Dr. Chan combines cutting-edge research in environmental science with innovative teaching methodologies, contributing to sustainable chemistry solutions and materials characterization.",
+  //   image: "/donald.webp",
+  //   urls: ["https://chem.cuhk.edu.hk/people/academic-staff/ckl/"],
+  // },
   {
     name: "Prof. Joanne Yip Yiu Wan",
     role: "Professor & Associate Dean, School of Fashion & Textiles, PolyU",
@@ -161,7 +161,7 @@ export function Speakers() {
         <h3 className="text-2xl font-bold text-center mb-4 text-[var(--blue-dark)]">
           Featured Speakers
         </h3>
-        <div className="grid md:grid-cols-4 gap-8 w-full">
+        <div className="grid md:grid-cols-3 gap-8 w-full">
           {featuredSpeakers.map((speaker, index) => {
             const realIndex = speakers.findIndex(
               (s) => s.name === speaker.name
