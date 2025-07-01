@@ -25,7 +25,7 @@ export function Hero() {
               <div className="flex items-center justify-center gap-3 text-lg md:text-2xl">
                 <span>Sponsored by</span>
                 <img
-                  src={"../R-GN Logo-Non White Background.png"}
+                  src={"../R-GN Logo-white BG.png"}
                   alt="Goodnotes"
                   className="w-50 h-8 md:w-75 md:h-20"
                 />
