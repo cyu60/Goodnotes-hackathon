@@ -57,23 +57,30 @@ const day2Events = [
     icon: <Coffee className="w-5 h-5 text-[var(--blue-dark)]" />,
   },
   {
-    title: "Keynote Block: Reimagining the Future of Learning",
+    title: "Welcoming Remarks",
     description:
-      "Featuring Professor Paul Kim (World Bank, Former Associate Dean at Stanford Graduate School of Education) and Mr. Quincy Larson (Founder of freeCodeCamp).",
-    time: "9:15 AM - 10:00 AM",
+      "Dr Minh Tran, COO of Goodnotes and Mr Chinat Yu, Organizer, MentorMates Hackathon welcome participants and set the stage for the day.",
+    time: "9:15 AM - 9:20 AM",
     icon: <Mic className="w-5 h-5 text-[var(--gray-medium)]" />,
+  },
+  {
+    title: "Keynote: Reimagining the Future of Learning 1",
+    description:
+      "Featuring Mr. Quincy Larson (Founder of freeCodeCamp).",
+    time: "9:20 AM - 9:50 AM",
+    icon: <Zap className="w-5 h-5 text-[var(--blue-light)]" />,
   },
   {
     title: "Transition/Break",
     description: "Quick break to refresh and prepare for the next session.",
-    time: "10:00 AM - 10:15 AM",
+    time: "9:50 AM - 10:00 AM",
     icon: <Clock className="w-5 h-5 text-gray-500" />,
   },
   {
     title: "Fireside Chat: Education Perspectives",
     description:
       "Featuring voices from special education, AI in medical education, and fashion/textile education.",
-    time: "10:15 AM - 11:00 AM",
+    time: "10:00 AM - 10:45 AM",
     icon: <Users className="w-5 h-5 text-[var(--blue-light)]" />,
   },
   {
@@ -81,15 +88,15 @@ const day2Events = [
       "Fireside Chat: Inside Goodnotes – Building the Future of Notes & Learning",
     description:
       "Learn from 2–3 senior Goodnotes team members about building innovative learning technologies.",
-    time: "11:00 AM - 11:45 AM",
-    icon: <Zap className="w-5 h-5 text-[var(--blue-dark)]" />,
+    time: "10:45 AM - 11:30 AM",
+    icon: <BookOpen className="w-5 h-5 text-[var(--blue-dark)]" />,
   },
   {
-    title: "Transition & Early Lunch Setup, Light Networking",
+    title: "Keynote: Reimagining the Future of Learning 2",
     description:
-      "Time to prepare for lunch and continue networking with participants and mentors.",
-    time: "11:45 AM - 12:00 PM",
-    icon: <Clock className="w-5 h-5 text-gray-500" />,
+      "Featuring Professor Paul Kim (World Bank, Former Associate Dean at the Stanford Graduate School of Education, Stanford University (formerly)).",
+    time: "11:30 AM - 12:00 PM",
+    icon: <Mic className="w-5 h-5 text-[var(--gray-medium)]" />,
   },
   {
     title: "Lunch + Guided Ideation: Framing Real-World Education Challenges",
