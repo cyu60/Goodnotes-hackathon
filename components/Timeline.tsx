@@ -60,14 +60,14 @@ const day2Events = [
     title: "Welcoming Remarks",
     description:
       "Dr Minh Tran, COO of Goodnotes and Mr Chinat Yu, Organizer, MentorMates Hackathon welcome participants and set the stage for the day.",
-    time: "9:15 AM - 9:20 AM",
+    time: "9:15 AM - 9:25 AM",
     icon: <Mic className="w-5 h-5 text-[var(--gray-medium)]" />,
   },
   {
     title: "Keynote: Reimagining the Future of Learning 1",
     description:
       "Featuring Mr. Quincy Larson (Founder of freeCodeCamp).",
-    time: "9:20 AM - 9:50 AM",
+    time: "9:30 AM - 9:50 AM",
     icon: <Zap className="w-5 h-5 text-[var(--blue-light)]" />,
   },
   {
@@ -95,7 +95,7 @@ const day2Events = [
     title: "Keynote: Reimagining the Future of Learning 2",
     description:
       "Featuring Professor Paul Kim (World Bank, Former Associate Dean at the Stanford Graduate School of Education, Stanford University (formerly)).",
-    time: "11:30 AM - 12:00 PM",
+    time: "11:40 AM - 12:00 PM",
     icon: <Mic className="w-5 h-5 text-[var(--gray-medium)]" />,
   },
   {
