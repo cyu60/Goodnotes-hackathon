@@ -59,7 +59,7 @@ const day2Events = [
   {
     title: "Welcoming Remarks",
     description:
-      "Dr Minh Tran, COO of Goodnotes and Mr Chinat Yu, Organizer, MentorMates Hackathon welcome participants and set the stage for the day.",
+      "Matthew Kwok, Academic Affairs Lead of Goodnotes and Mr Chinat Yu, Organizer, MentorMates Hackathon welcome participants and set the stage for the day.",
     time: "9:15 AM - 9:25 AM",
     icon: <Mic className="w-5 h-5 text-[var(--gray-medium)]" />,
   },

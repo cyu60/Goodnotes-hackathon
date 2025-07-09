@@ -5,13 +5,13 @@ import { useState } from "react";
 
 const speakers = [
   {
-    name: "Dr. Minh Tran",
-    role: "Chief Operating Officer, Goodnotes",
+    name: "Matthew Kwok",
+    role: "Academic Affairs Lead, Goodnotes",
     description:
-      "Dr. Minh Tran is the Chief Operating Officer at Goodnotes, the beloved digital note-taking app that won Apple's 2022 iPad App of the Year. He spearheads Goodnotes' people and corporate functions and leads Goodnotes' work with school systems around the world. With a BA in Psychology from Yale University and a Doctorate in Education from the University of Hong Kong, Dr. Tran started his career as a 5th grade teacher in Los Angeles. Prior to Goodnotes, he served as an Executive Director at EF Education First, where he advised governments in more than 20 countries on large-scale assessment and training initiatives. A frequent speaker at education conferences like Bett, he focuses on AI-powered pedagogical transformation and the future of digital learning.",
-    image: "/minh.jpeg",
+      "Matthew Kwok is the Academic Affairs Lead at Goodnotes, the beloved digital note-taking app that won Apple's 2022 iPad App of the Year.",
+    image: "/mentormates.png",
     isKeynote: true,
-    urls: ["https://hk.linkedin.com/in/minhtranhk"],
+    urls: ["https://www.linkedin.com/in/matthewtszlokkwok?originalSubdomain=hk"],
   },
   {
     name: "Paul Kim",
